@@ -57,7 +57,7 @@ const About = () => {
                   <div className="number">
                     <Odometer value={clientCount} format="d" duration={1000} />+
                   </div>
-                  <p>Satisfied Clients</p>
+                  <p>Satisfied Client's</p>
                 </div>
               </div>
             </div>
