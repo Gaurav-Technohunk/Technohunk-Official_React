@@ -19,28 +19,29 @@ const MessagesTwo = ({extraClassName=''}) => {
                     <div className="col-lg-6">
                       <div className="input-group">
                         <label className="form-label">Your Name</label>
-                        <input type="text" className="form-control form-field shadow-none" placeholder="Adnan Walker"/>
+                        <input type="text" className="form-control form-field shadow-none" placeholder="Enter your name"/>
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="input-group">
                         <label className="form-label">Your Email</label>
                         <input type="text" className="form-control form-field shadow-none"
-                          placeholder="info.example@gmail.com"/>
+                          placeholder="Enter your Email"/>
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="input-group">
                         <label className="form-label">Your Number</label>
-                        <input type="text" className="form-control form-field shadow-none" placeholder="+088123456789"/>
+                        <input type="text" className="form-control form-field shadow-none" placeholder="Enter your number"/>
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="input-group">
                         <label className="form-label">Your Area</label>
+                        {/* <input type="text" className="form-control form-field shadow-none" placeholder="Enter your place"/> */}
                         <select className="form-select form-field shadow-none" aria-label="Default select example">
-                          <option>New York City</option>
-                          <option>Los Angeles</option>
+                          <option>India</option>
+                          <option>USA</option>
                           <option>Chicago</option>
                           <option>Houston</option>
                         </select>
@@ -68,7 +69,7 @@ const MessagesTwo = ({extraClassName=''}) => {
                     <div className="icon flex-shrink-0"><i className="fa-solid fa-paper-plane"></i></div>
                     <div className="text">
                       <p className="cn-title">Address </p>
-                      <h5 className="cn-info">4517 Washington Ave. Manchester</h5>
+                      <h5 className="cn-info">H-11, Sector-23, Sanjay Nagar, Ghaziabad - 201002 (U.P.), India</h5>
                     </div>
                   </li>
                   <li className="d-flex align-items-center">
@@ -76,7 +77,7 @@ const MessagesTwo = ({extraClassName=''}) => {
                     <div className="text">
                       <p className="cn-title">Email</p>
                       <h5 className="cn-info">
-                        <a href="mailto:info@example.com">info@example.com</a>
+                        <a href="mailto:Info@technohunk.co.in">Info@technohunk.co.in</a>
                       </h5>
                     </div>
                   </li>
@@ -85,7 +86,7 @@ const MessagesTwo = ({extraClassName=''}) => {
                     <div className="text">
                       <p className="cn-title">Phone</p>
                       <h5 className="cn-info">
-                        <a href="tel:(239)555-0108">(239) 555-0108</a>
+                        <a href="tel:+91 9873003702">+91 9873003702</a>
                       </h5>
                     </div>
                   </li>

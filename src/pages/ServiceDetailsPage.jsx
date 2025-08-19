@@ -25,10 +25,13 @@ const ServiceDetailsPage = () => {
                   className="img-fluid w-100"/>
               </div>
               <div className="service-text mt-30">
-                <h3 className="title">Tech solutions for a smarter future</h3>
-                <p>The rapid advancement of technology continuously drives innovation within the IT sector, making
-                  it a dynamic and evolving field. Cloud computing, artificial intelligence, and cybersecurity are
-                  among the critical areas within IT that have transformed businesses operate</p>
+                <h2 className="title">Software solutions for a smarter future</h2>
+                <p>Software solutions focus on building intelligent,scalable, and efficient systems that 
+                  simplify daily tasks, enhance decision-making,and drive innovation. By leveraging modern 
+                  technologies such as artificial intelligence,cloud computing, and automation, these 
+                  solutions empower businesses and individuals to achieve higher productivity, reduce costs, 
+                  and create sustainable growth. They not only solve today’s challenges but also prepare us 
+                  for a more connected and technologically advanced tomorrow.</p>
                 <h4 className="sub-title">Innovative IT for business growth</h4>
                 <p>IT solutions streamline processes, enhance communication, an improve decision-making by providing
                   real-time data protecting sensitive information from t and breaches. IT services also include
@@ -50,7 +53,7 @@ const ServiceDetailsPage = () => {
                     <div className="col-xl-6">
                       <div className="inner-text">
                         <h4 className="sub-title mt-0">Secure your future with IT</h4>
-                        <p>It encompasses the use of computers, net, and other digl technologies to store, retrieve,
+                        <p>It encompasses the use of computers, net, and other digital technologies to store, retrieve,
                           transmit, and manipulate data. IT professionals develop maintain the infrastructure that
                           support</p>
                         <ul className="list-unstyled m-0 inner-options">

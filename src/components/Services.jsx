@@ -78,42 +78,21 @@ const Services = ({ isSlider = true, showTitle = true, extraClassName='' }) => {
               1024: { slidesPerView: 3, spaceBetween: 30 },
             }}
           >
-          
-      {services.map((service) => (
-        <SwiperSlide key={service.id}>
-          <div className="service-item rounded-20">
-            <Link to="/service-details" className="d-block w-100">
-              <div
-                className={`icon-box rounded-20 ${service.className} d-flex justify-content-center align-items-center`}
-              >
-                <img src={service.icon} alt="service-icon" />
-              </div>
-              <div className="text">
-                <h4 className="service-title">{service.title}</h4>
-              </div>
-            </Link>
-
-            <div className="text">
-              <p
-                style={
-                  !expandedItems[service.id] ? truncateStyle : {}
-                }
-              >
-                {service.description}
-              </p>
-
-              <button
-                className="btn btn-link p-0"
-                onClick={() => toggleExpand(service.id)}
-              >
-                {expandedItems[service.id] ? "Read less" : "Read more"}
-              </button>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-   
- 
+            {services.map((service) => (
+              <SwiperSlide key={service.id}>
+                <div className="service-item rounded-20">
+                  <Link to={`/service-details`} className="d-block w-100">
+                    <div className={`icon-box rounded-20 ${service.className} d-flex justify-content-center align-items-center`}>
+                      <img src={service.icon} alt="service-icon" />
+                    </div>
+                    <div className="text">
+                      <h4 className="service-title">{service.title}</h4>
+                      <p>{service.description}</p>
+                    </div>
+                  </Link>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         ) : (
           <div className="row">
