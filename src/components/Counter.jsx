@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
-import counterImg from '../assets/images/img/counter-image.png';
+import counterImg from '../assets/images/img/global.jpg';
 import { motion } from "framer-motion";
 import { fadeIn } from "./variants";
 
@@ -62,18 +62,16 @@ const Counter = () => {
               whileInView={"show"}
               viewport={{ once: true, amount: 0.7 }}
               className="heading-style1 mb-40">
-              Connecting the Dots of Digital Innovation Worldwide!
+              Empowering Businesses Through Intelligent Innovation, Everywhere
             </motion.h2>
           </div>
         </div>
         <div className="row g-4">
           <div className="col-lg-6">
             <div className="counter-text">
-              <p>
-                The IT industry offers diverse career opportunities, from
-                network administration to software development. As technology
-                continues to evolve, the importance of IT in shaping the future
-                of businesses.
+              <p className='text-dark  .fa'>
+                At Technohunk, digital innovation knows no boundaries.
+                We empower organizations worldwide with adaptive solutions that transform challenges into opportunities.
               </p>
               <div className="counter-wrapper">
                 <div className="row g-4">

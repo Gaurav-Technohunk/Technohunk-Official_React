@@ -9,7 +9,7 @@ const Blog = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-7 mx-auto">
-            <SectionTitle subTitle="blog & News" title="Transforming Challenges into Opportunities" extraClass="text-center" />
+            <SectionTitle subTitle="blog & News" title="Ideas That Inspire, News That Matters." extraClass="text-center" />
           </div>
         </div>
         <div className="row">

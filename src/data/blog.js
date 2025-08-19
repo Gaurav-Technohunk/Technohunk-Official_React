@@ -1,7 +1,7 @@
 // blog images
-import blogImg1 from '../assets/images/blog/blog-img-1.png';
-import blogImg2 from '../assets/images/blog/blog-img-2.png';
-import blogImg3 from '../assets/images/blog/blog-img-3.png';
+import blogImg1 from '../assets/images/blog/b1.png';
+import blogImg2 from '../assets/images/blog/b4.png';
+import blogImg3 from '../assets/images/blog/b3.png';
 
 // blog two images
 import blog2Img1 from '../assets/images/blog/blog-2-img-1.png';
@@ -19,28 +19,30 @@ import blogSmImg1 from '../assets/images/blog/blog-sm-img-1.png';
 import blogSmImg2 from '../assets/images/blog/blog-sm-img-2.png';
 import blogSmImg3 from '../assets/images/blog/blog-sm-img-3.png';
 
-export const blogs = [{
-    img: blogImg1,
-    author: "Br Simmons",
-    date: "26 Jan, 2023",
-    title: "Future-Proofing Your Business",
-    description: "Information Technology the backbone of modern businesses, enabling them to operate efficiently and effectively",
-  },
+export const blogs = [
   {
     img: blogImg2,
-    author: "Br Simmons",
-    date: "26 Jan, 2023",
-    title: "Leading the Digital Revolution",
-    description: "Information Technology the backbone of modern businesses, enabling them to operate efficiently and effectively",
+    author: "Technohunk Team",
+    date: "12 Feb, 2024",
+    title: "AI-Powered Solutions Driving Business Growth",
+    description: "Discover how AI and automation are helping enterprises boost efficiency, cut costs, and unlock new opportunities in a digital-first world.",
+  },
+  {
+    img: blogImg1,
+    author: "Technohunk Team",
+    date: "08 Sep, 2024",
+    title: "Shaping the Future with Digital Transformation",
+    description: "From cloud adoption to intelligent apps, explore the strategies that empower businesses to stay agile and future-ready in an evolving landscape.",
   },
   {
     img: blogImg3,
-    author: "Br Simmons",
-    date: "26 Jan, 2023",
-    title: "Revolution Digital Experiences",
-    description: "Information Technology the backbone of modern businesses, enabling them to operate efficiently and effectively",
+    author: "Technohunk Team",
+    date: "15 Jan, 2025",
+    title: "Generative AI: Redefining Innovation in 2025",
+    description: "Generative AI is revolutionizing industries by enabling smarter decision-making and personalized digital experiences—see how it’s changing the game.",
   }
 ];
+
 
 export const blogsTwo = [{
     img: blog2Img1,

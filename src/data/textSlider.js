@@ -4,27 +4,27 @@ import globeIcon from '../assets/images/icons/globe-icon.svg';
 export const textSlider = [
   {
     id: 1,
-    title: 'Digital Wizards',
+    title: "Java Experts",
     icon: globeIcon,
   },
   {
     id: 2,
-    title: 'Byte Guard',
+    title: "AI & ML Innovators",
     icon: globeIcon,
   },
   {
     id: 3,
-    title: 'Inno Secure',
+    title: "Python Specialists",
     icon: globeIcon,
   },
   {
     id: 4,
-    title: 'Cloud Guard',
+    title: "ReactJS Developers",
     icon: globeIcon,
   },
   {
     id: 5,
-    title: 'Technologies',
+    title: "Generative AI Pioneers",
     icon: globeIcon,
   },
 ];

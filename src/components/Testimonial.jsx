@@ -11,12 +11,12 @@ const Testimonial = () => {
         <div className="row g-4">
           <div className="col-lg-6">
             <div className="testimonial-info">
-              <SectionTitle subTitle="Clients Testimonials" title="Elevating Business with IT Excellence" extraClass="mb-20" />
+              <SectionTitle subTitle="Clients Testimonials" title="Voices of trust. Stories of success." extraClass="mb-20" />
               <div className="short-info">
-                <p>
-                  Maintenance, ensuring that systems run smoothly and efficiently.
-                  Information Technology is a field that encompasses the development
-                  and use of computer systems.
+                <p className=".fa ">
+                  Our clients are at the heart of everything we do.
+                  Their stories reflect the trust, innovation, and success we build together.
+                  Here’s what they have to say about partnering with Technohunk.
                 </p>
               </div>
               <div className="call-us">
@@ -29,7 +29,7 @@ const Testimonial = () => {
                   </span>
                   <div className="info">
                     <span className="title text-uppercase">CALL US ANYTIME</span>
-                    <h4 className="number">(704) 555-0127</h4>
+                    <h4 className="number">+91 9873003702</h4>
                   </div>
                 </a>
               </div>
@@ -68,7 +68,7 @@ const Testimonial = () => {
                             <img
                               src={testimonial.img}
                               alt={testimonial.name}
-                              className="w-100 h-100 object-fit-cover"
+                              className="w-5 h-5 object-fit-cover"
                             />
                           </div>
                           <div className="text">
