@@ -1,0 +1,9 @@
+import React from 'react'
+
+const AI_ML_Page = () => {
+  return (
+    <div>AI_ML_ServiceDetailsPage</div>
+  )
+}
+
+export default AI_ML_Page

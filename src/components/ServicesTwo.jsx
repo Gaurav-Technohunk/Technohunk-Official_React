@@ -1,7 +1,6 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
 import { Link } from 'react-router-dom';
-import { servicesTwo } from "../data/services";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 

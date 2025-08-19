@@ -81,10 +81,15 @@ const ProjectDetailsPage = () => {
           </div>
           <div className="project-description">
             <h3 className="title split-text right">Redefining the Digital Landscape</h3>
-            <p>Cybersecurity is a crucial aspect of IT, protecting sensitive information threats and breaches. IT services
-              also include technical support and maintenance, ensuring that systems run smoothly and efficiently. IT
-              industry offers diverse career opportunities, from network administration to software development As
-              technology continues to evolve, the importance of IT in shaping the future of businesses and society</p>
+            <p>The Digital Landscape is about embracing innovation, technology, 
+              and transformation to shape the future of businesses and societies. With the 
+              rapid evolution of artificial intelligence, cloud computing, automation, and 
+              data-driven decision-making, organizations are reimagining how they operate, 
+              engage with customers, and deliver value.This transformation goes beyond adopting 
+              digital tools—it signifies a cultural shift towards agility, connectivity, and 
+              smarter ecosystems. By redefining the digital landscape, industries unlock new 
+              opportunities, enhance efficiency, and create sustainable growth in an increasingly 
+              competitive and interconnected world.</p>
             <p>Cloud computing, artificial intelligence, an cybersecurity are among the critical areas within IT that have
               transformed how businesses operate. IT solutions streamline processes, enhance communication, and improve
               decision-making by providing real-time data and analytics. Cybersecurity</p>
