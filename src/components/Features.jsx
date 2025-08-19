@@ -1,9 +1,9 @@
 import React from 'react';
-import featureImg1 from '../assets/images/features/feature-img-1.png';
-import featureImg2 from '../assets/images/features/feature-img-2.png';
-import featureIcon1 from '../assets/images/icons/feature-icon-1.svg';
-import featureIcon2 from '../assets/images/icons/feature-icon-2.svg';
-import featureIcon3 from '../assets/images/icons/feature-icon-3.svg';
+import featureImg1 from '../assets/images/features/e2.jpg';
+import featureImg2 from '../assets/images/features/e3.jpg';
+import featureIcon1 from '../assets/images/icons/ai.png';
+import featureIcon2 from '../assets/images/icons/time.png';
+import featureIcon3 from '../assets/images/icons/secure.png';
 import SectionTitle from './SectionTitle';
 import { motion } from 'framer-motion';
 import { fadeIn } from './variants';
@@ -32,7 +32,7 @@ const Features = () => {
           </div>
           <div className="col-lg-6">
             <div className="feature-text">
-              <SectionTitle subTitle="Our features" title="Connecting the Dots of Innovation" />
+              <SectionTitle subTitle="Our features" title="Solutions as unique as your goals" />
               <motion.div
                 variants={fadeIn("left", 0.2)}
                 initial="hidden"
@@ -40,12 +40,13 @@ const Features = () => {
                 viewport={{ once: true, amount: 0.7 }}
                 className="feature-item d-flex align-items-center">
                 <div
-                  className="icon-box rounded-20 icon-box-primary d-flex justify-content-center align-items-center">
+                  className="icon-box rounded-20 d-flex justify-content-center align-items-center">
+                  
                   <img src={featureIcon1} alt="feature-icon" />
                 </div>
                 <div className="info">
-                  <h4 className="feature-title">Tech Vista Solutions</h4>
-                  <p>Our mission is there are many variations of passages Lorem Ipsum available</p>
+                  <h4 className="feature-title">AI-Powered Solutions</h4>
+                  <p className='text-dark  .fa'>Leverage AI to transform data into insights, automate workflows, and accelerate innovation.</p>
                 </div>
               </motion.div>
               <motion.div
@@ -54,12 +55,12 @@ const Features = () => {
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.7 }}
                 className="feature-item d-flex align-items-center">
-                <div className="icon-box rounded-20 icon-box-secondary d-flex justify-content-center align-items-center">
-                  <img src={featureIcon2} alt="feature-icon" />
+                <div className="icon-box rounded-20 d-flex justify-content-center align-items-center">
+                  <img src={featureIcon2} alt="feature-icon" className='w-100'/>
                 </div>
                 <div className="info">
-                  <h4 className="feature-title">Pro Guard IT Services</h4>
-                  <p>Our mission is there are many variations of passages Lorem Ipsum available</p>
+                  <h4 className="feature-title">Future-Ready Architecture</h4>
+                  <p className='text-dark  .fa'>Scalable, adaptive systems designed to evolve with your business and market demands.</p>
                 </div>
               </motion.div>
               <motion.div
@@ -68,12 +69,12 @@ const Features = () => {
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.7 }}
                 className="feature-item d-flex align-items-center">
-                <div className="icon-box rounded-20 icon-box-tertiary d-flex justify-content-center align-items-center">
-                  <img src={featureIcon3} alt="feature-icon" />
+                <div className="icon-box rounded-20 d-flex justify-content-center align-items-center">
+                  <img src={featureIcon3} alt="feature-icon"  />
                 </div>
                 <div className="info">
-                  <h4 className="feature-title">Cyber Shield Experts</h4>
-                  <p>Our mission is there are many variations of passages Lorem Ipsum available</p>
+                  <h4 className="feature-title">Secure & Reliable Systems</h4>
+                  <p className='text-dark  .fa'>Enterprise-grade security and performance built into every solution to safeguard your future.</p>
                 </div>
               </motion.div>
             </div>

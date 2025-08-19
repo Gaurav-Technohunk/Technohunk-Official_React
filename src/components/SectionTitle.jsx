@@ -7,7 +7,7 @@ const SectionTitle = ({ subTitle, title, extraClass, titleClass }) => {
     <div className={`section-title-block ${extraClass}`}>
       {subTitle && (
         <h6
-          className="section-sub-title position-relative d-inline-block text-uppercase">
+          className="section-sub-title position-relative d-inline-block text-uppercase text-primary">
           {subTitle}
         </h6>
       )}

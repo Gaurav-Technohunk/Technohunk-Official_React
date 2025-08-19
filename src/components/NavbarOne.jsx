@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import logo from '../assets/images/logo/logo.svg';
+import logo from '../assets/images/logo/logo1.png';
 import { Link } from "react-router-dom";
 import Menu from './Menu';
 import MobileMenu from './MobileMenu';
@@ -23,6 +23,7 @@ const NavbarOne = () => {
     <header className="ep-header-section w-100" id="sticky-header">
       <nav className="navbar p-0 navbar-expand-xl d-none d-xl-flex">
         <div className="container header-one-container">
+        
           <Link className="navbar-brand" to="/">
             <img src={logo} alt="logo" />
           </Link>
@@ -45,8 +46,8 @@ const NavbarOne = () => {
                   <i className="fa-solid fa-phone"></i>
                 </span>
                 <div className="info">
-                  <span className="title">Need help?</span>
-                  <h5 className="number">+123 456 7890</h5>
+                  <span className="title">Let's Connect!</span>
+                  <h5 className="number">+91 9873003702</h5>
                 </div>
               </a>
             </div>

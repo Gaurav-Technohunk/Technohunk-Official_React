@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
-import faqImg1 from "../assets/images/faq/faq-img-1.png";
-import faqImg2 from "../assets/images/faq/faq-img-2.png";
+import faqImg1 from "../assets/images/faq/faq.jpg";
+import faqImg2 from "../assets/images/faq/engage.jpg";
 import groupIcon from "../assets/images/icons/group-person-icon.svg";
 import groupIcon2 from "../assets/images/icons/group-person-icon-2.svg";
 import { faq } from "../data/faq";
@@ -50,7 +50,7 @@ const Faq = ({ extraClassName = '' }) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
-            <SectionTitle subTitle="Ask Question" title="Empowering Progress Through Technology" extraClass="mb-30" />
+            <SectionTitle subTitle="Ask Question" title="Everything you need to know, in one place." extraClass="mb-30" />
             <div className="faq-body">
               <div className="accordion" id="accordionExample">
                 {faq.map((item, index) => (
@@ -87,12 +87,12 @@ const Faq = ({ extraClassName = '' }) => {
               <div className="row g-4">
                 <div className="col-lg-12">
                   <div className="single-img rounded-20 overflow-hidden">
-                    <img loading="lazy" src={faqImg1} alt="faq-img" className="img-fluid w-100" />
+                    <img loading="lazy" src={faqImg1} alt="faq-img" className="" style={{width:"580px", height:"321px", objectFit:"cover"}} />
                   </div>
                 </div>
                 <div className="col-lg-6 col-sm-6">
                   <div className="single-img rounded-20 overflow-hidden">
-                    <img loading="lazy" src={faqImg2} alt="faq-img" className="img-fluid w-100" />
+                    <img loading="lazy" src={faqImg2} alt="faq-img" className="" style={{width:"274px", height:"269px", objectFit:"cover"}} />
                   </div>
                 </div>
                 <div className="col-lg-6 col-sm-6">

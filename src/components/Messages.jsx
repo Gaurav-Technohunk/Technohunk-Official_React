@@ -1,5 +1,5 @@
 import React from 'react'
-import messageImg from '../assets/images/img/message-img.png';
+import messageImg from '../assets/images/img/connect.png';
 import SectionTitle from './SectionTitle';
 
 const Messages = () => {
@@ -9,7 +9,7 @@ const Messages = () => {
         <div className="row">
           <div className="col-lg-6">
             <div className="message-text position-relative">
-              <SectionTitle subTitle="Talk to us" title="Shaping the Future with Technology" extraClass="mb-40" />
+              <SectionTitle subTitle="Talk to us" title="We’re just a conversation away." extraClass="mb-40" />
               <form action="#" className="message-form">
                 <div className="row g-3">
                   <div className="col-lg-6">
@@ -35,8 +35,8 @@ const Messages = () => {
                     <div className="input-group">
                       <label className="form-label">Your Area</label>
                       <select className="form-select form-field shadow-none" aria-label="Default select example">
-                        <option>New York City</option>
-                        <option>Los Angeles</option>
+                        <option>India</option>
+                        <option>USA</option>
                         <option>Chicago</option>
                         <option>Houston</option>
                       </select>
@@ -57,7 +57,7 @@ const Messages = () => {
           </div>
           <div className="col-lg-6">
             <div className="message-image overflow-hidden position-absolute bottom-0 end-0">
-              <img loading="lazy" src={messageImg} alt="message-image" className="img-fluid w-100" />
+              <img loading="lazy" src={messageImg} alt="message-image" className="img-fluid" />
             </div>
           </div>
         </div>

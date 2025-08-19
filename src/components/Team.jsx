@@ -19,7 +19,7 @@ const Team = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-7 mx-auto">
-            <SectionTitle subTitle="Creative Members" title="Technology that Moves You Forward" extraClass="text-center" />
+            <SectionTitle subTitle="Creative Members" title="Smart people. Bold ideas. Big impact." extraClass="text-center" />
           </div>
         </div>
         <div className="row">

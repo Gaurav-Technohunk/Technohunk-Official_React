@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { services } from "../data/services";
@@ -7,6 +7,22 @@ import SectionTitle from './SectionTitle';
 
 const Services = ({ isSlider = true, showTitle = true, extraClassName='' }) => {
   const swiperRef = useRef(null);
+   const [expandedItems, setExpandedItems] = useState({});
+
+  const toggleExpand = (id) => {
+    setExpandedItems((prev) => ({
+      ...prev,
+      [id]: !prev[id], // toggle only this service id
+    }));
+  };
+
+   const truncateStyle = {
+    display: "-webkit-box",
+    WebkitLineClamp: 3,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+  };
 
   useEffect(() => {
     if (isSlider && swiperRef.current) {
@@ -25,7 +41,7 @@ const Services = ({ isSlider = true, showTitle = true, extraClassName='' }) => {
           {showTitle && (
             <div className="row mb-60">
               <div className="col-xl-6 col-md-9">
-                <SectionTitle subTitle="Our Services" title="Smart Solutions for a Digital World" extraClass="mb-0" />
+                <SectionTitle subTitle="Our Services" title="Smart, Scalable, and Secure IT Services" extraClass="mb-0" />
               </div>
               {isSlider && (
                 <div className="col-xl-6 col-md-3 align-self-end">
@@ -62,21 +78,42 @@ const Services = ({ isSlider = true, showTitle = true, extraClassName='' }) => {
               1024: { slidesPerView: 3, spaceBetween: 30 },
             }}
           >
-            {services.map((service) => (
-              <SwiperSlide key={service.id}>
-                <div className="service-item rounded-20">
-                  <Link to="/service-details" className="d-block w-100">
-                    <div className={`icon-box rounded-20 ${service.className} d-flex justify-content-center align-items-center`}>
-                      <img src={service.icon} alt="service-icon" />
-                    </div>
-                    <div className="text">
-                      <h4 className="service-title">{service.title}</h4>
-                      <p>{service.description}</p>
-                    </div>
-                  </Link>
-                </div>
-              </SwiperSlide>
-            ))}
+          
+      {services.map((service) => (
+        <SwiperSlide key={service.id}>
+          <div className="service-item rounded-20">
+            <Link to="/service-details" className="d-block w-100">
+              <div
+                className={`icon-box rounded-20 ${service.className} d-flex justify-content-center align-items-center`}
+              >
+                <img src={service.icon} alt="service-icon" />
+              </div>
+              <div className="text">
+                <h4 className="service-title">{service.title}</h4>
+              </div>
+            </Link>
+
+            <div className="text">
+              <p
+                style={
+                  !expandedItems[service.id] ? truncateStyle : {}
+                }
+              >
+                {service.description}
+              </p>
+
+              <button
+                className="btn btn-link p-0"
+                onClick={() => toggleExpand(service.id)}
+              >
+                {expandedItems[service.id] ? "Read less" : "Read more"}
+              </button>
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+   
+ 
           </Swiper>
         ) : (
           <div className="row">

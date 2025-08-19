@@ -1,5 +1,6 @@
 import React from 'react'
 import bannerImg from '../assets/images/banner/banner-img-1.png';
+import bannerVideo from '../assets/images/banner/banner-video-1.mp4'
 import bannerShapeOne from '../assets/images/shape/banner-shape-1.svg';
 import bannerShapeTwo from '../assets/images/shape/banner-shape-2.png';
 import VideoModal from '../components/VideoModal';
@@ -25,8 +26,9 @@ const Banner = () => {
               className="banner-text position-relative">
               <img loading="lazy" src={bannerShapeOne} alt="banner-shape"
                 className="position-absolute banner-title-shape" />
-              <h1 className="banner-title heading-style1">Technology That Powers the Future</h1>
-              <p>lorem ipsum dolor sit amet consectetur. Facilisi cursus vulputate vestibulum etiam rhoncus </p>
+              <h1 className="banner-title heading-style1">Where Code Meets Intelligence</h1>
+              {/* Technohunk: Unlock Opportunities with Intelligent Tech.  Where Code Meets Intelligence */}
+              <p className='text-dark  .fa'>At Technohunk, we architect the digital core of your business—building intelligent, adaptive systems that solve today’s complexities to unlock the opportunities of tomorrow.</p>
               <div className="banner-buttons">
                 <Link to="/about" className="theme-btn position-relative d-inline-flex align-items-center">
                   Read More
@@ -54,8 +56,9 @@ const Banner = () => {
               whileInView="show"
               viewport={{ once: true, amount: 0.7 }}
               className="banner-image"
-            >
-              <img loading="lazy" src={bannerImg} alt="banner-img" className="img-fluid w-100" />
+            >  
+            <video loading="lazy" src={bannerVideo} className="img-fluid w-100 border-50 rounded mt-4" alt="banner-img" autoPlay loop muted></video>
+              {/* <img loading="lazy" src={bannerImg} alt="banner-img" className="img-fluid w-100" /> */}
             </motion.div>
 
           </div>

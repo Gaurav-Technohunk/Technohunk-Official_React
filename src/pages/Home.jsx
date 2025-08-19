@@ -21,9 +21,9 @@ const Home = () => {
       <Counter/>
       <Team/>
       <Messages/>
-      <Cta/>
+      {/* <Cta/> */}
       <Testimonial/>
-      <Projects/>
+      {/* <Projects/> */}
       <TextSlider/>
       <Faq/>
       <Blog/>
