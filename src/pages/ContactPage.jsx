@@ -80,8 +80,8 @@ const ContactPage = () => {
                   <div className="text">
                     <h4 className="title">Phone</h4>
                     <ul className="list-unstyled">
-                      <li><a href="tel:(480)555-0103">(480) 555-0103</a></li>
-                      <li><a href="tel:(505)555-0125">(505) 555-0125</a></li>
+                      <li><a href="tel:+91 9873003702">+91 9873003702</a></li>
+                      {/* <li><a href="tel:(505)555-0125">(505) 555-0125</a></li> */}
                     </ul>
                   </div>
                 </div>
@@ -99,8 +99,8 @@ const ContactPage = () => {
                   <div className="text">
                     <h4 className="title">Email</h4>
                     <ul className="list-unstyled">
-                      <li><a href="mailto:info@gmail.com">info@gmail.com</a></li>
-                      <li><a href="mailto:example@example.com">example@example.com</a></li>
+                      <li><a href="mailto:info@gmail.com">Info@technohunk.co.in</a></li>
+                      {/* <li><a href="mailto:example@example.com">example@example.com</a></li> */}
                     </ul>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ const ContactPage = () => {
                   <div className="text">
                     <h4 className="title">Location</h4>
                     <ul className="list-unstyled">
-                      <li>4517 Washington Ave. Manchester, Kentucky 39495</li>
+                      <li>H-11, Sector-23, Sanjay Nagar, Ghaziabad - 201002 (U.P.), India</li>
                     </ul>
                   </div>
                 </div>

@@ -54,9 +54,9 @@ const BlogTwo = () => {
             <SwiperSlide key={index}>
               <div className="blog-item rounded-30">
                 <div className="img overflow-hidden position-relative">
-                  <a href="/blog-details" className="d-block w-100">
+                  <Link to={`/blog/${blog.slug}`} className="d-block w-100">
                     <img loading="lazy" src={blog.img} alt="blog-img" className="img-fluid w-100" />
-                  </a>
+                  </Link>
                   <div className="blog-meta style2 section-bg position-absolute start-50 translate-middle-x d-inline-flex align-items-center justify-content-between">
                     <Link to="#" className="date">{blog.date}</Link>
                     <Link to="#" className="admin">{blog.author}</Link>
@@ -64,9 +64,9 @@ const BlogTwo = () => {
                 </div>
                 <div className="text">
                   <h4 className="blog-title">
-                    <a href="/blog-details">{blog.title}</a>
+                    <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
                   </h4>
-                  <Link to="/blog-details" className="theme-btn theme-btn-border position-relative d-inline-flex align-items-center">
+                  <Link to={`/blog/${blog.slug}`} className="theme-btn theme-btn-border position-relative d-inline-flex align-items-center">
                     Read More
                     <span className="arrow">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
