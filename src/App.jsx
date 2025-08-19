@@ -52,7 +52,7 @@ function App() {
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="project-details" element={<ProjectDetailsPage />} />
           <Route path="blog" element={<BlogPage />} />
-          <Route path="blog-details" element={<BlogDetailsPage />} />
+          <Route path="blog/:slug" element={<BlogDetailsPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="*" element={<Error404 />} />
         </Route>
@@ -65,7 +65,7 @@ function App() {
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="project-details" element={<ProjectDetailsPage />} />
           <Route path="blog" element={<BlogPage />} />
-          <Route path="blog-details" element={<BlogDetailsPage />} />
+          <Route path="blog/:slug" element={<BlogDetailsPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="*" element={<Error404 />} />
         </Route>

@@ -17,26 +17,26 @@ const Blog = () => {
             <div className="col-lg-4 col-md-6" key={blog.title}>
               <div className="blog-item rounded-20">
                 <div className="img overflow-hidden">
-                  <Link to="/blog-details" className="d-block w-100">
+                  <Link to={`/blog/${blog.slug}`} className="d-block w-100">
                     <img loading="lazy" src={blog.img} alt="blog-img" className="img-fluid w-100" />
                   </Link>
                 </div>
                 <div className="text">
                   <div className="blog-meta d-flex align-items-center justify-content-between gap-2">
-                    <Link to="#" className="d-flex align-items-center">
+                    <Link to={`/blog/${blog.slug}`} className="d-flex align-items-center">
                       <i className="fas fa-user"></i>
                       {blog.author}
                     </Link>
-                    <Link to="#" className="d-flex align-items-center">
+                    <Link to={`/blog/${blog.slug}`} className="d-flex align-items-center">
                       <i className="fas fa-calendar-alt"></i>
                       {blog.date}
                     </Link>
                   </div>
                   <h4 className="blog-title">
-                    <Link to="/blog-details">{blog.title}</Link>
+                    <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
                   </h4>
                   <p>{blog.description}</p>
-                  <Link to="/blog-details" className="theme-btn theme-btn-border position-relative d-inline-flex align-items-center">
+                  <Link to={`/blog/${blog.slug}`} className="theme-btn theme-btn-border position-relative d-inline-flex align-items-center">
                     Read More
                     <span className="arrow">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

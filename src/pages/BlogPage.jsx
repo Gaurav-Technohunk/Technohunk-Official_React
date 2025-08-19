@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PageHeader from '../components/PageHeader';
 import BlogSidebar from '../components/BlogSidebar';
 import { blogSingle } from '../data/blog';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const BlogPage = () => {
@@ -9,6 +10,52 @@ const BlogPage = () => {
     { label: 'Home', link: '/' },
     { label: 'Blog', link: null }
   ];
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  const params = new URLSearchParams(location.search);
+  const tagFilter = params.get('tag');
+  const categoryFilter = params.get('category');
+  const q = (params.get('q') || '').toLowerCase();
+  const page = Math.max(1, parseInt(params.get('page') || '1', 10));
+  const pageSize = 6;
+  const filtered = blogSingle.filter((p) => {
+    const tagOk = tagFilter ? p.tags?.includes(tagFilter) : true;
+    const catOk = categoryFilter ? p.category === categoryFilter : true;
+    const textOk = q ? (p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)) : true;
+    return tagOk && catOk && textOk;
+  });
+  const total = filtered.length;
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const currentPage = Math.min(page, totalPages);
+  const startIndex = (currentPage - 1) * pageSize;
+  const paged = filtered.slice(startIndex, startIndex + pageSize);
+
+  const Pagination = ({ totalItems }) => {
+    const goTo = (p) => {
+      const next = new URLSearchParams(location.search);
+      next.set('page', String(p));
+      navigate(`/blog?${next.toString()}`);
+    };
+    if (totalPages <= 1) return null;
+    return (
+      <div className="pagination">
+        <ul className="list-unstyled d-flex justify-content-center w-100 align-items-center">
+          <li>
+            <button onClick={() => goTo(Math.max(1, currentPage - 1))} className="paginate rounded-pill d-flex justify-content-center align-items-center"><i className="fa-solid fa-angle-left"></i></button>
+          </li>
+          {Array.from({ length: totalPages }).map((_, i) => (
+            <li key={i}>
+              <button onClick={() => goTo(i + 1)} className={`paginate rounded-pill d-flex justify-content-center align-items-center ${currentPage === i + 1 ? 'active' : ''}`}>{i + 1}</button>
+            </li>
+          ))}
+          <li>
+            <button onClick={() => goTo(Math.min(totalPages, currentPage + 1))} className="paginate rounded-pill d-flex justify-content-center align-items-center"><i className="fa-solid fa-angle-right"></i></button>
+          </li>
+        </ul>
+      </div>
+    );
+  };
 
   return (
     <>
@@ -18,28 +65,28 @@ const BlogPage = () => {
           <div className="row">
             <div className="col-xl-8 col-lg-10 mx-auto">
               {
-                blogSingle.map((project) => (
+                paged.map((project) => (
                   <div className="blog-item rounded-30" key={project.id}>
                     <div className="img overflow-hidden position-relative">
-                      <Link to="/blog-details" className="d-block w-100">
+                      <Link to={`/blog/${project.slug}`} className="d-block w-100">
                         <img loading="lazy" src={project.img} alt="blog-single-img" className="img-fluid w-100" />
                       </Link>
                       <div
                         className="blog-meta style2 section-bg position-absolute start-50 translate-middle-x d-inline-flex align-items-center justify-content-between">
-                        <Link to="#" className="date">
+                        <Link to={`/blog/${project.slug}`} className="date">
                          {project.date}
                         </Link>
-                        <Link to="#" className="admin">
+                        <Link to={`/blog/${project.slug}`} className="admin">
                         {project.author}
                         </Link>
                       </div>
                     </div>
                     <div className="text">
                       <h3 className="blog-title">
-                        <Link to="/blog-details">{project.title}</Link>
+                        <Link to={`/blog/${project.slug}`}>{project.title}</Link>
                       </h3>
                       <p>{project.description}</p>
-                      <Link to="/blog-details"
+                      <Link to={`/blog/${project.slug}`}
                         className="theme-btn theme-btn-border position-relative d-inline-flex align-items-center">
                         Read More
                         <span className="arrow">
@@ -59,24 +106,8 @@ const BlogPage = () => {
                   </div>
                 ))
               }
-              <div className="pagination">
-                <ul className="list-unstyled d-flex justify-content-center w-100 align-items-center">
-                  <li>
-                    <Link to="/blog" className="paginate rounded-pill d-flex justify-content-center align-items-center"><i
-                      className="fa-solid fa-angle-left"></i></Link>
-                  </li>
-                  <li><Link to="/blog" className="paginate active rounded-pill d-flex justify-content-center align-items-center">1</Link>
-                  </li>
-                  <li><Link to="/blog" className="paginate rounded-pill d-flex justify-content-center align-items-center">2</Link>
-                  </li>
-                  <li><Link to="/blog" className="paginate rounded-pill d-flex justify-content-center align-items-center">3</Link>
-                  </li>
-                  <li>
-                    <Link to="/blog" className="paginate rounded-pill d-flex justify-content-center align-items-center"><i
-                      className="fa-solid fa-angle-right"></i></Link>
-                  </li>
-                </ul>
-              </div>
+              {/* Simple client-side pagination */}
+              <Pagination totalItems={filtered.length} />
             </div>
             <div className="col-xl-4 col-lg-10 mx-auto">
               <BlogSidebar />

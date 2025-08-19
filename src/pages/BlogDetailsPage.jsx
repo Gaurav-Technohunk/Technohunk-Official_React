@@ -2,40 +2,45 @@ import React from 'react';
 import PageHeader from '../components/PageHeader';
 import BlogSidebar from '../components/BlogSidebar';
 import blogBanner from '../assets/images/blog/blog-details-banner.png';
-import blogDetailsInnerImg1 from '../assets/images/blog/blog-details-inner-img-1.png';
-import blogDetailsInnerImg2 from '../assets/images/blog/blog-details-inner-img-2.png';
-import blogDetailsInnerImg3 from '../assets/images/blog/blog-details-inner-img-3.png';
-import blogDetailsInnerImg4 from '../assets/images/blog/blog-details-inner-img-4.png';
+// inner images are sourced from data per post
 import quoteIcon from '../assets/images/icons/quote-icon-2.svg';
 
 
-import { Link } from 'react-router-dom';
+import { Link, useParams, Navigate } from 'react-router-dom';
+import { blogSingle, posts } from '../data/blog';
 
 const BlogDetailsPage = () => {
+  const { slug } = useParams();
+  const currentIndex = posts.findIndex((p) => p.slug === slug);
+  const bySlug = currentIndex >= 0 ? posts[currentIndex] : null;
+  const activePost = bySlug ? blogSingle.find((b) => b.id === bySlug.id) || null : null;
+  const prevSlug = currentIndex > 0 ? posts[currentIndex - 1].slug : null;
+  const nextSlug = currentIndex >= 0 && currentIndex < posts.length - 1 ? posts[currentIndex + 1].slug : null;
+  if (!activePost) return <Navigate to="/404" replace />;
   const breadcrumbs = [
     { label: 'Home', link: '/' },
     { label: 'Blog', link: '/blog' },
-    { label: 'Blog Details', link: null }
+    { label: activePost ? activePost.title : 'Blog Details', link: null }
   ];
 
   return (
     <>
-      <PageHeader title="Blog Details" breadcrumbs={breadcrumbs} />
+      <PageHeader title={activePost.title} breadcrumbs={breadcrumbs} />
       <section className="ep-blog-details-section pt-120">
         <div className="container">
           <div className="row">
             <div className="col-xl-8 col-lg-10 mx-auto">
               <div className="blog-details-wrapper">
                 <div className="blog-details-banner position-relative">
-                  <img loading="lazy" src={blogBanner} alt="blog-details-banner" className="img-fluid w-100" />
+                  <img loading="lazy" src={activePost.img || blogBanner} alt="blog-details-banner" className="img-fluid w-100" />
                   <div className="blog-meta position-absolute d-inline-flex rounded-20 align-items-center gap-4">
                     <Link to="#" className="d-flex align-items-center">
                       <i className="fa-regular fa-user"></i>
-                      Br Simmons
+                      {activePost.author}
                     </Link>
-                    <Link to="#" className="d-flex align-items-center">
+                    <Link to={`/blog?category=${encodeURIComponent(activePost.category)}`} className="d-flex align-items-center">
                       <i className="fa-regular fa-folder-open"></i>
-                      Category
+                      {activePost.category}
                     </Link>
                     <Link to="#" className="d-flex align-items-center">
                       <i className="fa-regular fa-comments"></i>
@@ -44,31 +49,25 @@ const BlogDetailsPage = () => {
                   </div>
                 </div>
                 <div className="blog-description">
-                  <h3 className="title split-text right mb-30">Empowering progress through digital innovation Navigate your
-                    future</h3>
-                  <p>It encompasses the use of computers, networks, and other digital technologies to store, retrieve,
-                    transmit, and manipulate data. IT professionals dev and maintain the infrastructure that supports a
-                    company's operations, including hardware, software</p>
-                  <p> The rapid advancement of technology continuously drives innovation within the IT sector, making it a
-                    dynamic and evolving field. Cloud computing, artificial intelligence</p>
-                  <div className="inner-images my-30">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div className="image rounded-20 reveal right">
-                          <img loading="lazy" src={blogDetailsInnerImg1} alt="blog-details-inner-img"
-                            className="img-fluid w-100" />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div className="image rounded-20 reveal right">
-                          <img loading="lazy" src={blogDetailsInnerImg2} alt="blog-details-inner-img"
-                            className="img-fluid w-100" />
-                        </div>
+                  <h3 className="title split-text right mb-30">{activePost.title}</h3>
+                  <p>{activePost.description}</p>
+                  {activePost.content?.map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                  {activePost.innerImagesTop?.length ? (
+                    <div className="inner-images my-30">
+                      <div className="row">
+                        {activePost.innerImagesTop.map((src, i) => (
+                          <div key={i} className="col-lg-6">
+                            <div className="image rounded-20 reveal right">
+                              <img loading="lazy" src={src} alt={`blog-details-inner-img-${i+1}`} className="img-fluid w-100" />
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  </div>
-                  <p>IT solutions streamline processes, enhance communication, and improve decision-making by providing
-                    real-time data and analytics. Cybersecurity is a crucial aspect of IT</p>
+                  ) : null}
+                  <p>IT solutions streamline processes, enhance communication, and improve decision-making by providing real-time data and analytics. Cybersecurity is a crucial aspect of IT.</p>
                   <ul className="list-unstyled list-info">
                     <li className="d-flex align-items-center">
                       <i className="fa-solid fa-circle-check"></i>
@@ -84,48 +83,60 @@ const BlogDetailsPage = () => {
                       </h5>
                     </li>
                   </ul>
-                  <blockquote className="rounded-20 section-bg">
-                    <div className="icon mb-20">
-                      <img src={quoteIcon} alt="quote-icon" />
-                    </div>
-                    <p>Protecting sensitive information from threats and breaches. IT services also include technical
-                      support and maintenance, ensuring that systems run smoothly and efficiently. The IT industry offers
-                      diverse career opportunities, from network</p>
-                    <h5 className="name mt-20 position-relative">Bret Lee</h5>
-                  </blockquote>
-                  <h3 className="title mb-20 split-text right">Simplify Life with Mobile Apps</h3>
-                  <p>Administration to software developmen. As technology continues to evolve, the importance of IT in
-                    shaping the future of businesses and society cannot be overstated IT professionals develop and
-                    maintain the infrastructure that supports a company's operations, including hardware, software, and
-                    security systems. The rapid advancement of technology</p>
-                  <div className="inner-images my-30">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <div className="image rounded-20 reveal right">
-                          <img loading="lazy" src={blogDetailsInnerImg3} alt="blog-details-inner-img"
-                            className="img-fluid w-100" />
-                        </div>
+                  {activePost.highlights?.length ? (
+                    <ul className="list-unstyled list-info">
+                      {activePost.highlights.map((h, i) => (
+                        <li key={i} className="d-flex align-items-center">
+                          <i className="fa-solid fa-circle-check"></i>
+                          <h5 className="list-title">{h}</h5>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+
+                  {activePost.quote ? (
+                    <blockquote className="rounded-20 section-bg">
+                      <div className="icon mb-20">
+                        <img src={quoteIcon} alt="quote-icon" />
                       </div>
-                      <div className="col-lg-6">
-                        <div className="image rounded-20 reveal right">
-                          <img loading="lazy" src={blogDetailsInnerImg4} alt="blog-details-inner-img"
-                            className="img-fluid w-100" />
-                        </div>
+                      <p>{activePost.quote}</p>
+                      <h5 className="name mt-20 position-relative">{activePost.quoteAuthor || 'Author'}</h5>
+                    </blockquote>
+                  ) : null}
+
+                  {activePost.subheading ? (
+                    <>
+                      <h3 className="title mb-20 split-text right">{activePost.subheading}</h3>
+                      {activePost.subcontent?.map((t, i) => (
+                        <p key={i}>{t}</p>
+                      ))}
+                    </>
+                  ) : null}
+                  {activePost.innerImagesBottom?.length ? (
+                    <div className="inner-images my-30">
+                      <div className="row">
+                        {activePost.innerImagesBottom.map((src, i) => (
+                          <div key={i} className="col-lg-6">
+                            <div className="image rounded-20 reveal right">
+                              <img loading="lazy" src={src} alt={`blog-details-inner-img-bottom-${i+1}`} className="img-fluid w-100" />
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  </div>
-                  <p>Continuously drives innovation within the IT sector, making it a dynamic and evolving field. Cloud
-                    computing, artificial intelligence, and cybersecurity are among the critical areas within IT that have
-                    transformed how businesses operate</p>
+                  ) : null}
+                  {activePost.conclusion ? (
+                    <p>{activePost.conclusion}</p>
+                  ) : null}
                   <div className="tags-and-social-icon">
                     <div className="row">
                       <div className="col-lg-8">
                         <div className="tags d-md-flex align-items-center">
                           <h4 className="title mb-2 mb-md-0">Tags:</h4>
                           <ul className="list-unstyled">
-                            <li className="d-inline-block"><a href="#">Data Tech</a></li>
-                            <li className="d-inline-block"><a href="#">Optimization Services</a></li>
-                            <li className="d-inline-block"><a href="#">IT</a></li>
+                            {activePost.tags?.map((t) => (
+                              <li key={t} className="d-inline-block"><Link to={`/blog?tag=${encodeURIComponent(t)}`}>{t}</Link></li>
+                            ))}
                           </ul>
                         </div>
                       </div>
@@ -161,13 +172,13 @@ const BlogDetailsPage = () => {
                 <div className="blog-details-pagination rounded-20 section-bg">
                   <ul className="list-unstyled d-flex justify-content-between align-items-center gap-4">
                     <li>
-                      <Link to="#" className="d-flex align-items-center gap-3">
+                      <Link to={prevSlug ? `/blog/${prevSlug}` : '/blog'} className="d-flex align-items-center gap-3">
                         <span className="icon d-flex align-items-center justify-content-center rounded-pill"><i
                           className="fa-solid fa-arrow-left"></i></span> Previous
                       </Link>
                     </li>
                     <li>
-                      <Link to="#" className="active d-flex align-items-center gap-3">
+                      <Link to={nextSlug ? `/blog/${nextSlug}` : '/blog'} className="active d-flex align-items-center gap-3">
                         Next <span className="icon d-flex align-items-center justify-content-center rounded-pill"><i
                           className="fa-solid fa-arrow-right"></i></span>
                       </Link>

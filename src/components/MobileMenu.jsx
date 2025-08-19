@@ -72,7 +72,7 @@ const menus = [
       {
         id: 52,
         title: "Blog Details",
-        link: "/blog-details",
+        link: "/blog/drive-success-with-cutting-edge-technology",
       },
     ],
   },

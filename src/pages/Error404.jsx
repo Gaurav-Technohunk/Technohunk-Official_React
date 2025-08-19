@@ -19,8 +19,8 @@ const Error404 = () => {
               <img src={errorImg} alt="error-img" className="img-fluid w-100" />
             </div>
             <div className="text">
-              <Link to="/" className="theme-btn theme-btn-primary position-relative d-inline-flex align-items-center">
-                Back To Home
+              <Link to="/blog" className="theme-btn theme-btn-primary position-relative d-inline-flex align-items-center">
+                Back To Blog
                 <span className="arrow">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_4443_62)">
