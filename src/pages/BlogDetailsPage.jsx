@@ -4,6 +4,7 @@ import BlogSidebar from '../components/BlogSidebar';
 import blogBanner from '../assets/images/blog/blog-details-banner.png';
 // inner images are sourced from data per post
 import quoteIcon from '../assets/images/icons/quote-icon-2.svg';
+import { motion } from 'framer-motion';
 
 
 import { Link, useParams, Navigate } from 'react-router-dom';
@@ -103,7 +104,28 @@ const BlogDetailsPage = () => {
                   {activePost.quote ? (
                     <blockquote className="rounded-20 section-bg">
                       <div className="icon mb-20">
-                        <img src={quoteIcon} alt="quote-icon" />
+                        <motion.img
+                          src={quoteIcon}
+                          alt="quote-icon"
+                          initial={{ scale: 1, rotate: 0, y: 0 }}
+                          animate={{ y: [0, -10, 0, 10, 0], rotate: [0, 5, 0, -5, 0] }}
+                          whileHover={{ scale: 1.2, rotate: 10 }}
+                          transition={{
+                            y: {
+                              repeat: Infinity,
+                              duration: 2,
+                              ease: 'easeInOut',
+                            },
+                            rotate: {
+                              repeat: Infinity,
+                              duration: 2,
+                              ease: 'easeInOut',
+                            },
+                            type: 'spring',
+                            stiffness: 300
+                          }}
+                          style={{ width: '60px', height: '60px' }}
+                        />
                       </div>
                       <p>{activePost.quote}</p>
                       <h5 className="name mt-20 position-relative">{activePost.quoteAuthor || 'Author'}</h5>

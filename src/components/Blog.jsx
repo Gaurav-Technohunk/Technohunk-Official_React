@@ -14,7 +14,13 @@ const Blog = () => {
         </div>
         <div className="row">
           {blogs.map(blog => (
-            <div className="col-lg-4 col-md-6" key={blog.title}>
+            <motion.div
+              className="col-lg-4 col-md-6"
+              key={blog.title}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: 'spring', stiffness: 200, delay: 0.1 }}
+            >
               <div className="blog-item rounded-20">
                 <div className="img overflow-hidden">
                   <Link to={`/blog/${blog.slug}`} className="d-block w-100">
@@ -36,7 +42,12 @@ const Blog = () => {
                     <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
                   </h4>
                   <p>{blog.description}</p>
-                  <Link to={`/blog/${blog.slug}`} className="theme-btn theme-btn-border position-relative d-inline-flex align-items-center">
+                  <motion.a
+                    href={`/blog/${blog.slug}`}
+                    className="theme-btn theme-btn-border position-relative d-inline-flex align-items-center"
+                    whileHover={{ scale: 1.08, backgroundColor: '#007bff', color: '#fff' }}
+                    transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+                  >
                     Read More
                     <span className="arrow">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,10 +61,10 @@ const Blog = () => {
                         </g>
                       </svg>
                     </span>
-                  </Link>
+                  </motion.a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
