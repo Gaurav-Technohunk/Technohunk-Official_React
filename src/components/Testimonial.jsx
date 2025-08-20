@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { testimonials } from "../data/testmonial";
 import SectionTitle from "./SectionTitle";
+import { motion } from 'framer-motion';
 
 const Testimonial = () => {
   return (
@@ -69,6 +70,24 @@ const Testimonial = () => {
                               src={testimonial.img}
                               alt={testimonial.name}
                               className="w-5 h-5 object-fit-cover"
+                              initial={{ scale: 1, rotate: 0, y: 0 }}
+                              animate={{ y: [0, -10, 0, 10, 0], rotate: [0, 5, 0, -5, 0] }}
+                              whileHover={{ scale: 1.1, rotate: 10 }}
+                              transition={{
+                                y: {
+                                  repeat: Infinity,
+                                  duration: 2,
+                                  ease: 'easeInOut',
+                                },
+                                rotate: {
+                                  repeat: Infinity,
+                                  duration: 2,
+                                  ease: 'easeInOut',
+                                },
+                                type: 'spring',
+                                stiffness: 300
+                              }}
+                              as={motion.img}
                             />
                           </div>
                           <div className="text">
@@ -80,6 +99,24 @@ const Testimonial = () => {
                           <img
                             src={testimonial.quoteIcon}
                             alt="quote-icon"
+                            initial={{ scale: 1, rotate: 0, y: 0 }}
+                            animate={{ y: [0, -10, 0, 10, 0], rotate: [0, 5, 0, -5, 0] }}
+                            whileHover={{ scale: 1.1, rotate: 10 }}
+                            transition={{
+                              y: {
+                                repeat: Infinity,
+                                duration: 2,
+                                ease: 'easeInOut',
+                              },
+                              rotate: {
+                                repeat: Infinity,
+                                duration: 2,
+                                ease: 'easeInOut',
+                              },
+                              type: 'spring',
+                              stiffness: 300
+                            }}
+                            as={motion.img}
                           />
                         </div>
                       </div>
