@@ -1,7 +1,7 @@
 // team images
-import teamImg1 from '../assets/images/team/team-img-1.png';
-import teamImg2 from '../assets/images/team/team-img-2.png';
-import teamImg3 from '../assets/images/team/team-img-3.png';
+import teamImg1 from '../assets/images/team/team.png';
+import teamImg2 from '../assets/images/team/prabhat-sir-modified.jpg';
+import teamImg3 from '../assets/images/team/team-3-modified.jpg';
 
 // team two images
 import team2Img1 from '../assets/images/team/team-2-img1.png';
@@ -11,8 +11,8 @@ import team2Img4 from '../assets/images/team/team-2-img4.png';
 
 export const teams = [{
     id: 1,
-    name: "Dianne Russell",
-    description: "Lorem ipsum dolor sit",
+    name: "Nagendra Kumar Yadav",
+    description: "Founder & CEO",
     image: teamImg1,
     socialLinks: {
       facebook: "#",
@@ -23,8 +23,8 @@ export const teams = [{
   },
   {
     id: 2,
-    name: "Floyd Miles",
-    description: "Lorem ipsum dolor sit",
+    name: "Prabhat Kumar",
+    description: "Project Manager",
     image: teamImg2,
     socialLinks: {
       facebook: "#",
@@ -36,8 +36,8 @@ export const teams = [{
   },
   {
     id: 3,
-    name: "Kathryn Murphy",
-    description: "Lorem ipsum dolor sit",
+    name: "Aditya Kumar",
+    description: "Full Stack Developer",
     image: teamImg3,
     socialLinks: {
       facebook: "#",

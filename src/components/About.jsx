@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import SectionTitle from "./SectionTitle";
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
-import aboutImg from "../assets/images/about-us/about-img.png";
+import aboutImg from "../assets/images/about-us/about11.png";
 import aboutShape from "../assets/images/about-us/about-shape.svg";
 import userIcon from "../assets/images/icons/group-user.svg";
 import { Link } from "react-router-dom";
@@ -36,7 +36,7 @@ const About = () => {
   useEffect(() => {
     if (isVisible) {
       setTimeout(() => {
-        setClientCount(5000);
+        setClientCount(200);
       }, 500);
     }
   }, [isVisible]);
@@ -48,8 +48,8 @@ const About = () => {
           <div className="col-xl-6 col-lg-7 col-md-10 mx-auto">
             <div className="about-image position-relative">
               <img loading="lazy" src={aboutImg} alt="about-img" className="img-fluid w-100" />
-              <img src={aboutShape} alt="about-shape" className="about-shape position-absolute" />
-              <div className="clients rounded-20 position-absolute d-flex align-items-center" ref={counterRef}>
+              {/* <img src={aboutShape} alt="about-shape" className="about-shape position-absolute" /> */}
+              {/* <div className="clients rounded-20 position-absolute d-flex align-items-center" ref={counterRef}>
                 <div className="icon-box icon-box-tertiary d-flex align-items-center justify-content-center rounded-pill">
                   <img src={userIcon} alt="group-user" />
                 </div>
@@ -59,30 +59,30 @@ const About = () => {
                   </div>
                   <p>Satisfied Client's</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-xl-6 col-lg-9 mx-auto">
             <div className="about-text">
-              <SectionTitle subTitle="about us" title="Unlocking the Power of Technology" extraClassName="mb-20" />
+              <SectionTitle subTitle="about us" title="Passion for Tech. , Commitment to You" extraClassName="mb-20" />
               <p>
-                The IT industry offers diverse career opportunities, from network administration to software development.
+                From strategy to execution, we transform ideas into impactful technologies that drive real business results. With innovation at our core, we help organizations stay ahead in a rapidly evolving digital world.
               </p>
               <div className="list-box mt-30">
                 <div className="row">
                   <div className="col-sm-6 list-wrapper">
                     <ul className="list-unstyled list-info">
                       <li>
-                        <i className="fa-solid fa-circle-check"></i> Crafting Digital World
+                        <i className="fa-solid fa-circle-check"></i> Crafting Digital World With AI
                       </li>
                       <li>
-                        <i className="fa-solid fa-circle-check"></i> Advancing Technology
+                        <i className="fa-solid fa-circle-check"></i> Redefining Growth
                       </li>
                       <li>
                         <i className="fa-solid fa-circle-check"></i> Technology That Powers
                       </li>
                       <li>
-                        <i className="fa-solid fa-circle-check"></i> Digital Solutions
+                        <i className="fa-solid fa-circle-check"></i> Intelligent Systems That Scale
                       </li>
                     </ul>
                   </div>
@@ -95,16 +95,16 @@ const About = () => {
                         <i className="fa-solid fa-circle-check"></i> Next-Level IT
                       </li>
                       <li>
-                        <i className="fa-solid fa-circle-check"></i> Art of Technology
+                        <i className="fa-solid fa-circle-check"></i> Future-Ready Transformation
                       </li>
                       <li>
-                        <i className="fa-solid fa-circle-check"></i> Accelerate with Cutting
+                        <i className="fa-solid fa-circle-check"></i> Robust & Maintainable IT
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div className="text-start text-lg-center text-xl-start">
+              {/* <div className="text-start text-lg-center text-xl-start">
               <Link to="/about"
                   className="theme-btn theme-btn-border position-relative d-inline-flex align-items-center">
                   Read More
@@ -121,7 +121,7 @@ const About = () => {
                     </svg>
                   </span>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

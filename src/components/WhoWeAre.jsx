@@ -3,7 +3,7 @@ import SectionTitle from './SectionTitle';
 import Odometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 import IconPhone from '../assets/images/icons/icon-headphone.svg';
-import WhoImg from '../assets/images/img/who-we-are.png';
+import WhoImg from '../assets/images/about-us/a1.png';
 import { motion } from 'framer-motion';
 import { fadeIn } from './variants';
 const WhoWeAre = () => {
@@ -46,22 +46,22 @@ const WhoWeAre = () => {
         <div className="row">
           <div className="col-xl-5 align-self-center">
             <div className="short-info text-center text-md-start">
-              <SectionTitle title="Craft Tomorrow Digital World" extraClass="mb-20 text-center text-md-start" />
+              <SectionTitle title="Impact Through Intelligent Innovation" extraClass="mb-20 text-center text-md-start" />
               <motion.p
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.7 }}
-              >Lorem ipsum dolor sit amet consectetur adipiscing elit platea pharetra, yhe a nostra mattis
-                hendrerit proin mollis pretium</motion.p>
+              >At Technohunk, we leverage AI, deep learning, and modern engineering to build scalable, reliable solutions.
+               Our mission is to empower businesses with technology that drives growth and future readiness.</motion.p>
               <motion.p
                 variants={fadeIn("up", 0.4)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.7 }}
-              >Lorem ipsum dolor sit amet consectetur adipiscing elit platea pharetra, yhe a nostra mattis
-                hendrerit proin mollis pretium Lorem ipsum dolor sit amet consectetur adipiscing elit platea
-                pharetra, yhe a nostra mattis hendrerit proin mollis pretium</motion.p>
+              >Technohunk blends innovation with expertise in AI, Python, and Java to craft intelligent solutions.
+                We design systems that are robust, scalable, and built to adapt to evolving challenges.
+                Our focus is clear: helping businesses thrive through smarter, future-ready technology.</motion.p>
             </div>
           </div>
           <div className="col-xl-7">
@@ -73,7 +73,7 @@ const WhoWeAre = () => {
               className="image d-sm-flex justify-content-end">
               <div className="counter flex-shrink-0 text-center flex-grow-1 d-flex flex-column justify-content-center">
                 <div
-                  className="icon-box rounded-pill d-flex justify-content-center align-items-center icon-box-primary mx-auto">
+                  className="icon-box rounded-pill d-flex justify-content-center align-items-center icon-box-tertiary mx-auto">
                   <img src={IconPhone} alt="icon-headphone" />
                 </div>
                 <div className="count d-flex align-items-center justify-content-center">

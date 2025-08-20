@@ -1,80 +1,32 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo/logo.svg";
+import logo from "../assets/images/logo/logo1.png";
 
 const menus = [
   {
     id: 1,
     title: "Home",
-    link: "/home",
-    submenu: [
-      {
-        id: 11,
-        title: "Home One",
-        link: "/",
-      },
-      {
-        id: 12,
-        title: "Home Two",
-        link: "/home-two",
-      },
-    ],
+    link: "/",
   },
   {
     id: 2,
-    title: "About",
+    title: "About Us",
     link: "/about",
   },
   {
     id: 3,
-    title: "Services",
+    title: "What We Do",
     link: "#",
-    submenu: [
-      {
-        id: 31,
-        title: "Service Single",
-        link: "/services",
-      },
-      {
-        id: 32,
-        title: "Services Details",
-        link: "/service-details",
-      },
-    ],
   },
   {
     id: 4,
-    title: "Projects",
+    title: "What We Think",
     link: "#",
-    submenu: [
-      {
-        id: 41,
-        title: "Projects Single",
-        link: "/projects",
-      },
-      {
-        id: 42,
-        title: "Project Details",
-        link: "/project-details",
-      },
-    ],
   },
   {
     id: 5,
-    title: "Blog",
+    title: "Insights",
     link: "#",
-    submenu: [
-      {
-        id: 51,
-        title: "Blog Single",
-        link: "/blog",
-      },
-      {
-        id: 52,
-        title: "Blog Details",
-        link: "/blog/drive-success-with-cutting-edge-technology",
-      },
-    ],
   },
   {
     id: 6,

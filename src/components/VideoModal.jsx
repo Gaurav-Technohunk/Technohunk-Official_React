@@ -6,7 +6,7 @@ const VideoModal = ({ buttonClass, iconClass }) => {
 
   return (
     <>
-      <ModalVideo channel="youtube" autoplay isOpen={isOpen} videoId="KuTOO28tRI4" onClose={() => setOpen(false)} />
+      <ModalVideo channel="youtube" autoplay isOpen={isOpen} videoId="k_DhQRoZh8c" onClose={() => setOpen(false)} />
 
       <button onClick={() => setOpen(true)} className={buttonClass}>
         {/* Conditionally render icon and text */}

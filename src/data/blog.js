@@ -225,6 +225,6 @@ export const blogSingle = posts.map((p) => ({
 // Sidebar recent posts (derived)
 export const blogSidebar = [
   { id: posts[0].id, slug: posts[0].slug, img: posts[0].cardImg, category: posts[0].category, comments: '2', title: posts[0].title },
-  { id: posts[1].id, slug: posts[1].slug, img: posts[1].cardImg, category: posts[1].category, comments: '2', title: posts[1].title },
+  { id: posts[1].id, slug: posts[1].slug, img: posts[1].cardImg, category: posts[1].category, comments: '1', title: posts[1].title },
   { id: posts[2].id, slug: posts[2].slug, img: posts[2].cardImg, category: posts[2].category, comments: '2', title: posts[2].title }
 ];

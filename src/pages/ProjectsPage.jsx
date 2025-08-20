@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 const ProjectsPage = () => {
   const breadcrumbs = [
     { label: 'Home', link: '/' },
-    { label: 'Projects', link: null }
+    { label: 'What We Think', link: null }
   ];
   return (
     <>
-      <PageHeader title="Projects" breadcrumbs={breadcrumbs} />
+      <PageHeader title="What We Think" breadcrumbs={breadcrumbs} />
       <section className="ep-project-section pt-120">
       <div className="container">
         <div className="row g-4">
