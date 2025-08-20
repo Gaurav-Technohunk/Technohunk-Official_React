@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom'
 const Menu = () => {
   return (
     <ul className="navbar-nav mx-auto mb-lg-0">
-      {/* <li className="nav-item">
+      <li className="nav-item">
         <Link className="nav-link" aria-current="page" to="/">
-          Home <i className="fas fa-chevron-down"></i>
+          Home 
         </Link>
-        <ul className="sub-menu list-unstyled">
+        {/* <ul className="sub-menu list-unstyled">
           <li>
             <Link to="/">Home One</Link>
           </li>
           <li>
             <Link to="/home-two">Home Two</Link>
           </li>
-        </ul>
-      </li> */}
+        </ul> */}
+      </li>
       <li className="nav-item">
         <Link className="nav-link" to="/about">
           About Us

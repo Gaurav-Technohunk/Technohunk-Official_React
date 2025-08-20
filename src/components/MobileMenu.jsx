@@ -16,17 +16,17 @@ const menus = [
   {
     id: 3,
     title: "What We Do",
-    link: "#",
+    link: "/services",
   },
   {
     id: 4,
     title: "What We Think",
-    link: "#",
+    link: "/projects",
   },
   {
     id: 5,
     title: "Insights",
-    link: "#",
+    link: "/blog",
   },
   {
     id: 6,
