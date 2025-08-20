@@ -91,7 +91,7 @@ const routeMap = {
             {services.map((service) => (
               <SwiperSlide key={service.id}>
                 <div className="service-item rounded-20">
-                  <Link to={`/service-details`} className="d-block w-100">
+                    <Link  to={routeMap[service.slug] || "/not-found"}  className="d-block w-100">
                     <div className={`icon-box rounded-20 ${service.className} d-flex justify-content-center align-items-center`}>
                       <img src={service.icon} alt="service-icon" />
                     </div>
