@@ -10,7 +10,7 @@ export const services = [
   {
     id: 1,
     title: "Software Developement",
-    description: "As technology continues to evolve, the importance of IT in shaping the future.",
+    description: "As technology continues to rapidly evolve, the importance of IT in shaping the digital future grows.",
     icon: serviceIcon1,
     className: "icon-box-primary icon-box-text-white",
     slug:"software-development"
