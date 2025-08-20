@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion';
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import Categories from './Categories'
 import { blogTags } from '../data/blog'
@@ -57,24 +56,6 @@ const BlogSidebar = () => {
                         alt="blog-sm-img"
                         className="img-fluid w-100"
                         style={{ width: '100px', height: '70px', objectFit: 'cover', borderRadius: '8px' }}
-                        as={motion.img}
-                        initial={{ scale: 1, rotate: 0, y: 0 }}
-                        animate={{ y: [0, -10, 0, 10, 0], rotate: [0, 5, 0, -5, 0] }}
-                        whileHover={{ scale: 1.1, rotate: 10 }}
-                        transition={{
-                          y: {
-                            repeat: Infinity,
-                            duration: 2,
-                            ease: 'easeInOut',
-                          },
-                          rotate: {
-                            repeat: Infinity,
-                            duration: 2,
-                            ease: 'easeInOut',
-                          },
-                          type: 'spring',
-                          stiffness: 300
-                        }}
                       />
 
                   </Link>

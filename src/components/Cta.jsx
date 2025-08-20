@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion';
 import mailIcon from '../assets/images/icons/mail-icon.svg';
 
 const Cta = () => {
@@ -24,16 +23,8 @@ const Cta = () => {
                     <span className="mail-icon position-absolute top-50 translate-middle-y"><i
                         className="fas fa-envelope"></i></span>
                   </div>
-                  <motion.button
-                    className="theme-btn mt-3 mt-sm-0 theme-btn-primary position-relative flex-shrink-0"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    whileHover={{ scale: 1.08, backgroundColor: '#007bff', color: '#fff' }}
-                    transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-                  >
-                    Subscribe Now
-                  </motion.button>
-                  transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+                  <button className="theme-btn mt-3 mt-sm-0 theme-btn-primary position-relative flex-shrink-0">Subscribe
+                    Now</button>
                 </div>
               </form>
             </div>

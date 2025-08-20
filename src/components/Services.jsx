@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { services } from "../data/services";
@@ -94,28 +93,7 @@ const routeMap = {
                 <div className="service-item rounded-20">
                     <Link  to={routeMap[service.slug] || "/not-found"}  className="d-block w-100">
                     <div className={`icon-box rounded-20 ${service.className} d-flex justify-content-center align-items-center`}>
-                      <motion.img
-                        src={service.icon}
-                        alt="service-icon"
-                        initial={{ scale: 1, rotate: 0, y: 0 }}
-                        animate={{ y: [0, -10, 0, 10, 0], rotate: [0, 5, 0, -5, 0] }}
-                        whileHover={{ scale: 1.2, rotate: 10 }}
-                        transition={{
-                          y: {
-                            repeat: Infinity,
-                            duration: 2,
-                            ease: 'easeInOut',
-                          },
-                          rotate: {
-                            repeat: Infinity,
-                            duration: 2,
-                            ease: 'easeInOut',
-                          },
-                          type: 'spring',
-                          stiffness: 300
-                        }}
-                        style={{ width: '60px', height: '60px' }}
-                      />
+                      <img src={service.icon} alt="service-icon" />
                     </div>
                     <div className="text">
                       <h4 className="service-title">{service.title}</h4>
@@ -134,28 +112,7 @@ const routeMap = {
                   <Link  to={routeMap[service.slug] || "/not-found"}  className="d-block w-100">
                     {/* Override className only for non-slider view */}
                     <div className="icon-box rounded-20 icon-box-tertiary d-flex justify-content-center align-items-center">
-                      <motion.img
-                        src={service.icon}
-                        alt="service-icon"
-                        initial={{ scale: 1, rotate: 0, y: 0 }}
-                        animate={{ y: [0, -10, 0, 10, 0], rotate: [0, 5, 0, -5, 0] }}
-                        whileHover={{ scale: 1.2, rotate: 10 }}
-                        transition={{
-                          y: {
-                            repeat: Infinity,
-                            duration: 2,
-                            ease: 'easeInOut',
-                          },
-                          rotate: {
-                            repeat: Infinity,
-                            duration: 2,
-                            ease: 'easeInOut',
-                          },
-                          type: 'spring',
-                          stiffness: 300
-                        }}
-                        style={{ width: '60px', height: '60px' }}
-                      />
+                      <img src={service.icon} alt="service-icon" />
                     </div>
                     <div className="text">
                       <h4 className="service-title">{service.title}</h4>

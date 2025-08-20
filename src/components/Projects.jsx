@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from 'framer-motion';
 import { projects } from "../data/projects";
 import { Link } from "react-router-dom";
 import SectionTitle from "./SectionTitle";
@@ -25,28 +24,6 @@ const Projects = () => {
                 <div className="img overflow-hidden rounded-20">
                   <Link to="/project-details" className="d-block w-100">
                     <img src={project.image} alt={project.title} className="img-fluid w-100" />
-                    <motion.img
-                      src={project.image}
-                      alt={project.title}
-                      className="img-fluid w-100"
-                      initial={{ scale: 1, rotate: 0, y: 0 }}
-                      animate={{ y: [0, -10, 0, 10, 0], rotate: [0, 5, 0, -5, 0] }}
-                      whileHover={{ scale: 1.1, rotate: 10 }}
-                      transition={{
-                        y: {
-                          repeat: Infinity,
-                          duration: 2,
-                          ease: 'easeInOut',
-                        },
-                        rotate: {
-                          repeat: Infinity,
-                          duration: 2,
-                          ease: 'easeInOut',
-                        },
-                        type: 'spring',
-                        stiffness: 300
-                      }}
-                    />
                   </Link>
                 </div>
                 <div className="overlay position-absolute">
@@ -68,29 +45,6 @@ const Projects = () => {
                 <div className="img overflow-hidden rounded-20">
                   <Link to="/project-details" className="d-block w-100">
                     <img loading="lazy" src={project.image} alt={project.title} className="img-fluid w-100" />
-                    <motion.img
-                      loading="lazy"
-                      src={project.image}
-                      alt={project.title}
-                      className="img-fluid w-100"
-                      initial={{ scale: 1, rotate: 0, y: 0 }}
-                      animate={{ y: [0, -10, 0, 10, 0], rotate: [0, 5, 0, -5, 0] }}
-                      whileHover={{ scale: 1.1, rotate: 10 }}
-                      transition={{
-                        y: {
-                          repeat: Infinity,
-                          duration: 2,
-                          ease: 'easeInOut',
-                        },
-                        rotate: {
-                          repeat: Infinity,
-                          duration: 2,
-                          ease: 'easeInOut',
-                        },
-                        type: 'spring',
-                        stiffness: 300
-                      }}
-                    />
                   </Link>
                 </div>
                 <div className="overlay position-absolute">
