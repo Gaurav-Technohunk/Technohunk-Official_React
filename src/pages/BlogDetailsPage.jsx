@@ -60,7 +60,13 @@ const BlogDetailsPage = () => {
                         {activePost.innerImagesTop.map((src, i) => (
                           <div key={i} className="col-lg-6">
                             <div className="image rounded-20 reveal right">
-                              <img loading="lazy" src={src} alt={`blog-details-inner-img-${i+1}`} className="img-fluid w-100" />
+                              <img
+                                loading="lazy"
+                                src={src}
+                                alt={`blog-details-inner-img-${i+1}`}
+                                className="img-fluid w-100"
+                                style={{ width: '300px', height: '200px', objectFit: 'cover', borderRadius: '12px' }}
+                              />
                             </div>
                           </div>
                         ))}
@@ -118,7 +124,13 @@ const BlogDetailsPage = () => {
                         {activePost.innerImagesBottom.map((src, i) => (
                           <div key={i} className="col-lg-6">
                             <div className="image rounded-20 reveal right">
-                              <img loading="lazy" src={src} alt={`blog-details-inner-img-bottom-${i+1}`} className="img-fluid w-100" />
+                              <img
+                                loading="lazy"
+                                src={src}
+                                alt={`blog-details-inner-img-bottom-${i+1}`}
+                                className="img-fluid w-100"
+                                style={{ width: '300px', height: '200px', objectFit: 'cover', borderRadius: '12px' }}
+                              />
                             </div>
                           </div>
                         ))}

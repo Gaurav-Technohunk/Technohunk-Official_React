@@ -81,7 +81,6 @@ const ContactPage = () => {
                     <h4 className="title">Phone</h4>
                     <ul className="list-unstyled">
                       <li><a href="tel:+91 9873003702">+91 9873003702</a></li>
-                      {/* <li><a href="tel:(505)555-0125">(505) 555-0125</a></li> */}
                     </ul>
                   </div>
                 </div>
@@ -100,7 +99,6 @@ const ContactPage = () => {
                     <h4 className="title">Email</h4>
                     <ul className="list-unstyled">
                       <li><a href="mailto:info@gmail.com">Info@technohunk.co.in</a></li>
-                      {/* <li><a href="mailto:example@example.com">example@example.com</a></li> */}
                     </ul>
                   </div>
                 </div>
@@ -118,7 +116,7 @@ const ContactPage = () => {
                   <div className="text">
                     <h4 className="title">Location</h4>
                     <ul className="list-unstyled">
-                      <li>H-11, Sector-23, Sanjay Nagar, Ghaziabad - 201002 (U.P.), India</li>
+                      <li><a href='https://maps.app.goo.gl/5LWb4n9r2yqsQBF4A'>H-11, Sector-23, Sanjay Nagar, Ghaziabad - 201002 (U.P.), India</a></li>
                     </ul>
                   </div>
                 </div>
@@ -216,7 +214,7 @@ const ContactPage = () => {
 
         <div className="contact-map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25280012016!2d-74.14448732737499!3d40.69763123331177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1727346263569!5m2!1sen!2sbd"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.9415409462654!2d77.45106077613873!3d28.69139528140402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf15494cc8885%3A0xc0c3226b047178e8!2sTechnoHunk%20Infosolutions%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1755682565559!5m2!1sen!2sin"
           ></iframe>
         </div>
       </section>
