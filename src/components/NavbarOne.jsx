@@ -25,7 +25,16 @@ const NavbarOne = () => {
         <div className="container header-one-container">
         
           <Link className="navbar-brand" to="/">
-            <img src={logo} alt="logo" />
+            <img
+              src={logo}
+              alt="logo"
+              style={{ width: '120px', height: 'auto' }}
+              as={require('framer-motion').motion.img}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.08, rotate: 3 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+            />
           </Link>
           <button
             className="navbar-toggler"
