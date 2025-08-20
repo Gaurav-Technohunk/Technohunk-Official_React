@@ -50,7 +50,13 @@ const BlogSidebar = () => {
               <div key={blog.id} className="blog-sm-item d-flex align-items-center">
                 <div className="image flex-shrink-0 overflow-hidden">
                   <Link to={`/blog/${blog.slug}`} className="d-block w-100">
-                    <img loading="lazy" src={blog.img} alt="blog-sm-img" className="img-fluid w-100" />
+                      <img
+                        loading="lazy"
+                        src={blog.img}
+                        alt="blog-sm-img"
+                        className="img-fluid w-100"
+                        style={{ width: '100px', height: '70px', objectFit: 'cover', borderRadius: '8px' }}
+                      />
                   </Link>
                 </div>
                 <div className="text">
