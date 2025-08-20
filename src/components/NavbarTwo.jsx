@@ -44,8 +44,8 @@ const NavbarTwo = () => {
                     <i className="fa-solid fa-phone"></i>
                   </span>
                   <div className="info">
-                    <span className="title">Need help?</span>
-                    <h5 className="number">+123 456 7890</h5>
+                    <span className="title">Lets Connect!</span>
+                    <h5 className="number">+91 9873003702</h5>
                   </div>
                 </a>
               </div>
