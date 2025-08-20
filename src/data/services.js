@@ -48,20 +48,6 @@ export const services = [
     slug:"cybersecurity-advisory"
   },
   {
-    id: 4,
-    title: "Cybersecurity & Risk Manag.",
-    description: "Comprehensive protection for your digital assets with advanced security, compliance, and proactive threat management.",
-    icon: serviceIcon3,
-    className: "icon-box-tertiary",
-  },
-  {
-    id: 5,
-    title: "Enterprise Digital Innovation",
-    description: "Driving business transformation with modern technologies that unlock agility, efficiency, and sustainable growth.",
-    icon: serviceIcon4,
-    className: "icon-box-primary icon-box-text-white",
-  },
-  {
     id: 6,
 
     title:"Digital Transformation",

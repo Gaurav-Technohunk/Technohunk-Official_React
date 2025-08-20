@@ -33,6 +33,16 @@ const Services = ({ isSlider = true, showTitle = true, extraClassName='' }) => {
     }
   }, [isSlider]);
 
+const routeMap = {
+  "software-development": "/software-development",
+  "ai-ml-implimentation": "/ai-ml-implimentation",
+  "business-automation": "/business-automation",
+  "data-analytics": "/data-analytics",
+  "cybersecurity-advisory": "/cybersecurity-advisory",
+  "digital-transformation": "/digital-transformation"
+};
+
+
   return (
     <section className={`ep-services-section py-120 ${extraClassName}`}>
       <div className="container">
@@ -99,7 +109,7 @@ const Services = ({ isSlider = true, showTitle = true, extraClassName='' }) => {
             {services.map((service) => (
               <div key={service.id} className="col-lg-4 col-md-6">
                 <div className="service-item rounded-20">
-                  <Link to="/service-details" className="d-block w-100">
+                  <Link  to={routeMap[service.slug] || "/not-found"}  className="d-block w-100">
                     {/* Override className only for non-slider view */}
                     <div className="icon-box rounded-20 icon-box-tertiary d-flex justify-content-center align-items-center">
                       <img src={service.icon} alt="service-icon" />

@@ -7,13 +7,12 @@ import HomeOneLayout from "./components/HomeOneLayout";
 import HomeTwoLayout from "./components/HomeTwoLayout";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
-import ServiceDetailsPage from "./pages/ServiceDetailsPage";
-// import SoftwareDevelopment from "./pages/SoftwareDevelopment";
-// import AiMlImplementation from "./pages/AiMlImplementation";
-// import BusinessAutomation from "./pages/BusinessAutomation";
-// import DataAnalytics from "./pages/DataAnalytics";
-// import Cybersecurity from "./pages/Cybersecurity";
-// import DigitalTransformation from "./pages/DigitalTransformation";
+import SoftwareDevelopmentPage from "./pages/SoftwareDevelopmentPage";
+import AiMlImplementation from "./pages/AiMlImplementationPage";
+import BusinessAutomation from "./pages/BusinessAutomationPage";
+import DataAnalytics from "./pages/DataAnalyticsPage";
+import Cybersecurity from "./pages/CybersecurityPage";
+import DigitalTransformation from "./pages/DigitalTransformationPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import BlogPage from "./pages/BlogPage";
@@ -54,7 +53,12 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="services" element={<ServicesPage />} />
-          <Route path="service-details" element={<ServiceDetailsPage />} />
+          <Route path="software-development" element={<SoftwareDevelopmentPage />} />
+          <Route path="ai-ml-implimentation" element={<AiMlImplementation />} />
+          <Route path="business-automation" element={<BusinessAutomation />} />
+          <Route path="data-analytics" element={<DataAnalytics />} />
+          <Route path="cybersecurity-advisory" element={<Cybersecurity />} />
+          <Route path="digital-transformation" element={<DigitalTransformation />} />
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="project-details" element={<ProjectDetailsPage />} />
           <Route path="blog" element={<BlogPage />} />
@@ -63,7 +67,7 @@ function App() {
           <Route path="*" element={<Error404 />} />
         </Route>
         {/* Home Two */}
-        <Route path="home-two" element={<HomeTwoLayout />}>
+        {/* <Route path="home-two" element={<HomeTwoLayout />}>
           <Route index element={<HomeTwo />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="services" element={<ServicesPage />} />
@@ -74,7 +78,7 @@ function App() {
           <Route path="blog/:slug" element={<BlogDetailsPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="*" element={<Error404 />} />
-        </Route>
+        </Route> */}
       </Routes>
     </Router>
   );

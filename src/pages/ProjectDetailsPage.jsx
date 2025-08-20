@@ -15,7 +15,7 @@ const ProjectDetailsPage = () => {
 
   return (
     <>
-      <PageHeader title="Projects Details" breadcrumbs={breadcrumbs} />
+      <PageHeader title="What We Think" breadcrumbs={breadcrumbs} />
       <section className="ep-project-details-section pt-120">
         <div className="container">
           <div className="project-banner-image position-relative">
