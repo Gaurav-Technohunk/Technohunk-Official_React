@@ -1,5 +1,5 @@
 // testimonial images
-import testimonialImg from '../assets/images/testimonial/Scalepad.png';
+import testimonialImg from '../assets/images/icons/ai.png';
 import quoteIcon from '../assets/images/icons/quote-icon.svg';
 import testimonialImg3 from '../assets/images/testimonial/testimonial-img-3.png';
 
