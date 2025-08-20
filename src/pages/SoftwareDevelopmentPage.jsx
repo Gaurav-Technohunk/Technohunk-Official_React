@@ -1,47 +1,56 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader';
-import serviceDetailsImg1 from '../assets/images/services/service-details-img1.png'
+import serviceDetailsVideo from '../assets/images/services/service-details-vid1.mp4'
 import serviceDetailsImg2 from '../assets/images/services/service-details-img2.png'
 import { Link } from 'react-router-dom';
 import Categories from '../components/Categories';
 
-const ServiceDetailsPage = () => {
+const SoftwareDevelopmentPage = () => {
   const breadcrumbs = [
     { label: 'Home', link: '/' },
     { label: 'Services', link: '/services' },
-    { label: 'Service Details', link: null }
+    { label: 'Software Development', link: null }
   ];
 
   return (
     <div>
-      <PageHeader title="Service Details" breadcrumbs={breadcrumbs} />
+      <PageHeader title="What We Do" breadcrumbs={breadcrumbs} />
       <section className="ep-service-details-section mt-120">
       <div className="container">
         <div className="row">
           <div className="col-lg-8 service-content">
             <div className="service-details">
               <div className="service-banner rounded-20 overflow-hidden">
-                <img loading="lazy" src={serviceDetailsImg1} alt="service-details-img"
-                  className="img-fluid w-100"/>
+                {/* <img loading="lazy" src={serviceDetailsImg1} alt="service-details-img"
+                  className="img-fluid w-100"/> */}
+              <video
+              src={serviceDetailsVideo}
+              className="img-fluid w-100 rounded-3 shadow"
+              autoPlay
+              muted
+              loop
+              playsInline
+              />
+
               </div>
               <div className="service-text mt-30">
                 <h2 className="title">Software solutions for a smarter future</h2>
-                <p>Software solutions focus on building intelligent,scalable, and efficient systems that 
-                  simplify daily tasks, enhance decision-making,and drive innovation. By leveraging modern 
+                <p><b>Software solutions focus on building intelligent,scalable, and efficient systems that 
+                  simplify daily tasks, enhance decision-making,and drive innovation.</b> By leveraging modern 
                   technologies such as artificial intelligence,cloud computing, and automation, these 
                   solutions empower businesses and individuals to achieve higher productivity, reduce costs, 
                   and create sustainable growth. They not only solve today’s challenges but also prepare us 
                   for a more connected and technologically advanced tomorrow.</p>
                 <h4 className="sub-title">Innovative IT for business growth</h4>
-                <p>IT solutions streamline processes, enhance communication, an improve decision-making by providing
-                  real-time data protecting sensitive information from t and breaches. IT services also include
+                <p>IT solutions streamline processes, enhance communication, an <b>improve decision-making by providing
+                  real-time data protecting sensitive information from  breaches.</b> IT services also include
                   technical support and maintenance, ensuring that systems run smoothly and efficiently</p>
                 <ul className="list-unstyled options">
-                  <li><i className="fa-solid fa-circle-check"></i> Tech Solutions for a Connected World</li>
-                  <li><i className="fa-solid fa-circle-check"></i> Your Vision, Our Innovation</li>
-                  <li><i className="fa-solid fa-circle-check"></i> Technology That Drives Success</li>
-                  <li><i className="fa-solid fa-circle-check"></i> Connecting the Dots of Digital Innovation</li>
-                </ul>
+                  <li><i className="fa-solid fa-circle-check"></i> <b>Tech Solutions for a Connected World</b></li>
+                  <li><i className="fa-solid fa-circle-check"></i> <b>Your Vision, Our Innovation</b></li>
+                  <li><i className="fa-solid fa-circle-check"></i> <b>Technology That Drives Success</b></li>
+                  <li><i className="fa-solid fa-circle-check"></i> <b>Connecting the Dots of Digital Innovation</b></li>
+                </ul><b></b>
                 <div className="inner-details">
                   <div className="row">
                     <div className="col-xl-6">
@@ -57,11 +66,10 @@ const ServiceDetailsPage = () => {
                           transmit, and manipulate data. IT professionals develop maintain the infrastructure that
                           support</p>
                         <ul className="list-unstyled m-0 inner-options">
-                          <li><i className="fa-solid fa-angles-right"></i> angles-right
-                            Your IT Success Partner</li>
-                          <li><i className="fa-solid fa-angles-right"></i> Technology That Powers the Future</li>
-                          <li><i className="fa-solid fa-angles-right"></i> Accelerate with Cutting-Edge Tech</li>
-                          <li><i className="fa-solid fa-angles-right"></i> Revolutionizing Digital Experiences</li>
+                          <li><i className="fa-solid fa-angles-right"></i><b> angles-righ Your IT Success Partner</b></li>
+                          <li><i className="fa-solid fa-angles-right"></i><b> Technology That Powers the Future</b></li>
+                          <li><i className="fa-solid fa-angles-right"></i><b> Accelerate with Cutting-Edge Tech</b></li>
+                          <li><i className="fa-solid fa-angles-right"></i><b> Revolutionizing Digital Experiences</b></li>
                         </ul>
                       </div>
                     </div>
@@ -90,4 +98,4 @@ const ServiceDetailsPage = () => {
   );
 }
 
-export default ServiceDetailsPage;
+export default SoftwareDevelopmentPage;
