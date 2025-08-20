@@ -8,14 +8,14 @@ import MessagesTwo from '../components/MessagesTwo';
 const ServicesPage = () => {
   const breadcrumbs = [
     { label: 'Home', link: '/' },
-    { label: 'Services', link: null }
+    { label: 'What We Do', link: null }
   ];
 
   return (
     <>
-      <PageHeader title="Services" breadcrumbs={breadcrumbs} />
+      <PageHeader title="What We Do" breadcrumbs={breadcrumbs} />
       <Services isSlider={false} showTitle={false} extraClassName="style2"/>
-      <Cta />
+      {/* <Cta /> */}
       <Faq extraClassName="style2"/>
       <MessagesTwo extraClassName="style2" />
     </>

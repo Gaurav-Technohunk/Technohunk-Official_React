@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const BlogPage = () => {
   const breadcrumbs = [
     { label: 'Home', link: '/' },
-    { label: 'Blog', link: null }
+    { label: 'Insights', link: null }
   ];
 
   const location = useLocation();
@@ -59,7 +59,7 @@ const BlogPage = () => {
 
   return (
     <>
-      <PageHeader title="Blog" breadcrumbs={breadcrumbs} />
+      <PageHeader title="Insights" breadcrumbs={breadcrumbs} />
       <section className="ep-blog-section ep-blog-single-section pt-120">
         <div className="container">
           <div className="row">

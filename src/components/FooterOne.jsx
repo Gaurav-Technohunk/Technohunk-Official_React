@@ -2,7 +2,7 @@ import React from "react";
 import footerIcon1 from '../assets/images/icons/footer-short-icon-1.svg';
 import footerIcon2 from '../assets/images/icons/footer-short-icon-2.svg';
 import footerIcon3 from '../assets/images/icons/footer-short-icon-3.svg';
-import logo2 from '../assets/images/logo/logo2.svg';
+import logo2 from '../assets/images/logo/tech-logo.png';
 import { Link } from "react-router-dom";
 import ScrollToTopButton from "./ScrollToTopButton";
 
@@ -24,8 +24,8 @@ const FooterOne = () => {
                     <img src={footerIcon1} alt="footer-short-icon" />
                   </div>
                   <div className="text">
-                    <h4 className="title">Tech Fusion Solutions</h4>
-                    <p>It encompasses the use of computers, networks</p>
+                    <h4 className="title">Scalable Solutions</h4>
+                    <p>Delivering robust, future-ready systems designed to grow with your business.</p>
                   </div>
                 </div>
               </div>
@@ -35,8 +35,8 @@ const FooterOne = () => {
                     <img src={footerIcon2} alt="footer-short-icon" />
                   </div>
                   <div className="text">
-                    <h4 className="title">Digital Edge Innovations</h4>
-                    <p>Other digital technologies to store place network</p>
+                    <h4 className="title">AI-Driven Innovation</h4>
+                    <p>Leveraging AI, deep learning, and NLP to create smarter, faster solutions.</p>
                   </div>
                 </div>
               </div>
@@ -46,8 +46,8 @@ const FooterOne = () => {
                     <img src={footerIcon3} alt="footer-short-icon" />
                   </div>
                   <div className="text">
-                    <h4 className="title">Cloud Wave Services</h4>
-                    <p>The rapid advancement of technology continuously</p>
+                    <h4 className="title">Reliable Partnerships</h4>
+                    <p>Building trusted, maintainable technology that empowers long-term success.</p>
                   </div>
                 </div>
               </div>
@@ -55,14 +55,14 @@ const FooterOne = () => {
             <div className="footer-main">
               <div className="row g-4">
                 <div className="col-xl-3 col-lg-3 col-md-6">
-                  <div className="footer-widget footer-about">
+                  <div className="footer-widget footer-about ">
                     <div className="logo">
                       <a href="index.html">
-                        <img src={logo2} alt="logo2" />
+                        <img src={logo2} alt="logo2" className="w-50 img-fluid"   />
                       </a>
                     </div>
                     <div className="short-info">
-                      <p>Drives innovation within the IT sector, making it a dynamic </p>
+                      <p>Driving innovation and delivering scalable IT solutions for a smarter future.</p>
                     </div>
                     <div className="contact-info">
                       <ul className="list-unstyled">
@@ -73,7 +73,7 @@ const FooterOne = () => {
                             </div>
                             <h4 className="title">Address </h4>
                           </div>
-                          <p>2464 Royal Ln. Mesa, New Jersey</p>
+                          <p>H-11, Sector-23, Sanjay Nagar, Ghaziabad - 201002 (U.P.), India</p>
                         </li>
                         <li>
                           <div className="d-flex align-items-center gap-2">
@@ -82,7 +82,7 @@ const FooterOne = () => {
                             </div>
                             <h4 className="title">Email </h4>
                           </div>
-                          <a href="mailto:curtis.weaver@example.com">curtis.weaver@example.com</a>
+                          <a href="mailto:Info@technohunk.co.in">Info@technohunk.co.in</a>
                         </li>
                       </ul>
                     </div>
@@ -90,13 +90,14 @@ const FooterOne = () => {
                 </div>
                 <div className="col-xl-3 col-lg-4 col-md-6">
                   <div className="footer-widget footer-links services-widget">
-                    <h4 className="footer-title">Services</h4>
+                    <h4 className="footer-title">What We Do</h4>
                     <ul className="list-unstyled">
-                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> InfoSec Experts</Link></li>
-                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> Quantum IT Solutions</Link></li>
-                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> NexusTech Systems</Link></li>
-                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> SmartNet IT Services</Link></li>
-                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> ByteForce Solutions</Link></li>
+                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> Software Development </Link></li>
+                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> AI/ML Implementation </Link></li>
+                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> Business Process Auto.</Link></li>
+                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> Digital Transformation</Link></li>
+                      <li><Link to="/services"><i className="fas fa-chevron-right"></i>Cybersecurity Advisory</Link></li>
+                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> Data Analytics/Insights</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -105,9 +106,9 @@ const FooterOne = () => {
                     <h4 className="footer-title">Link</h4>
                     <ul className="list-unstyled">
                       <li><Link to="/about">About Us</Link></li>
-                      <li><Link to="/services">Services</Link></li>
-                      <li><Link to="/projects">Projects</Link></li>
-                      <li><Link to="/blog">Blog And News</Link></li>
+                      <li><Link to="/services">What We Do</Link></li>
+                      <li><Link to="/projects">What We Think</Link></li>
+                      <li><Link to="/blog">Insights</Link></li>
                       <li><Link to="/contact">Contact Us</Link></li>
                     </ul>
                   </div>
@@ -123,7 +124,7 @@ const FooterOne = () => {
                           </span>
                           <small>
                             <i className="fas fa-calendar-alt"></i>
-                            October 19, 2024
+                            Feb 19, 2025
                           </small>
                         </Link>
                       </li>
@@ -134,7 +135,7 @@ const FooterOne = () => {
                           </span>
                           <small>
                             <i className="fas fa-calendar-alt"></i>
-                            October 19, 2024
+                            June 10, 2025
                           </small>
                         </Link>
                       </li>
@@ -146,7 +147,7 @@ const FooterOne = () => {
                 <div className="row g-2">
                   <div className="col-lg-6">
                     <div className="footer-copyright text-center text-lg-start">
-                      <p>© Yoursitename 2024 | All Rights Reserved</p>
+                      <p>©Technohunk 2025 | All Rights Reserved</p>
                     </div>
                   </div>
                   <div className="col-lg-6">

@@ -1,5 +1,5 @@
 import React from 'react';
-import featureImg1 from '../assets/images/features/e2.jpg';
+import featureImg1 from '../assets/images/features/e4.png';
 import featureImg2 from '../assets/images/features/e3.jpg';
 import featureIcon1 from '../assets/images/icons/ai.png';
 import featureIcon2 from '../assets/images/icons/time.png';

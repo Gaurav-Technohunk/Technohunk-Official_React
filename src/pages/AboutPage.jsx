@@ -18,9 +18,10 @@ const AboutPage = () => {
       <About />
       <TextSlider/>
       <WhoWeAre/>
-      <Team/>
-      <Cta/>
-      <Pricing extraClassName="style2"/>
+      <Team />
+      {/* <Cta/> */}
+      {/* <TextSlider /> */}
+      {/* <Pricing extraClassName="style2"/> */}
     </>
   )
 }

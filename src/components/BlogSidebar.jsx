@@ -57,9 +57,10 @@ const BlogSidebar = () => {
                         className="img-fluid w-100"
                         style={{ width: '100px', height: '70px', objectFit: 'cover', borderRadius: '8px' }}
                       />
+
                   </Link>
                 </div>
-                <div className="text">
+                <div className="text ">
                   <ul className="blog-meta list-unstyled d-flex flex-wrap">
                     <li><Link to={`/blog?category=${encodeURIComponent(blog.category)}`}>{blog.category}</Link></li>
                     <li><Link to={`/blog/${blog.slug}`}>Comments ({blog.comments})</Link></li>

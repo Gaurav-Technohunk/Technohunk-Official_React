@@ -15,7 +15,7 @@ const Team = () => {
   };
 
   return (
-    <section className="ep-team-section py-120">
+    <section className="ep-team-section pt-120 mb-4">
       <div className="container">
         <div className="row">
           <div className="col-lg-7 mx-auto">
