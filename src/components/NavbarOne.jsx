@@ -6,6 +6,8 @@ import Menu from './Menu';
 import MobileMenu from './MobileMenu';
 
 const NavbarOne = () => {
+
+  
   useEffect(() => {
     const handleScroll = () => {
       const header = document.getElementById("sticky-header");
