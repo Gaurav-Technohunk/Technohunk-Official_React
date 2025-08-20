@@ -1,43 +1,9 @@
 import React from 'react'
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'
 
 const Menu = () => {
   return (
     <ul className="navbar-nav mx-auto mb-lg-0">
-      <motion.li
-        className="nav-item"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        whileHover={{ scale: 1.08, color: '#007bff' }}
-        transition={{ type: 'spring', stiffness: 200, delay: 0.1 }}
-      >
-        <Link className="nav-link" to="/about">
-          About Us
-        </Link>
-      </motion.li>
-      <motion.li
-        className="nav-item"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        whileHover={{ scale: 1.08, color: '#007bff' }}
-        transition={{ type: 'spring', stiffness: 200, delay: 0.2 }}
-      >
-        <Link className="nav-link" to="/services">
-          What We Do
-        </Link>
-      </motion.li>
-      <motion.li
-        className="nav-item"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        whileHover={{ scale: 1.08, color: '#007bff' }}
-        transition={{ type: 'spring', stiffness: 200, delay: 0.3 }}
-      >
-        <Link className="nav-link" to="/projects">
-          What We Think
-        </Link>
-      </motion.li>
       {/* <li className="nav-item">
         <Link className="nav-link" aria-current="page" to="/">
           Home <i className="fas fa-chevron-down"></i>
