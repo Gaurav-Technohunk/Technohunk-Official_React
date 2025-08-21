@@ -2,7 +2,7 @@ import React from 'react'
 import PageHeader from '../components/PageHeader';
 import { projectSingle } from "../data/projects";
 import { Link } from 'react-router-dom';
-
+import TrustedBy from '../components/OurProjects'
 const ProjectsPage = () => {
   const breadcrumbs = [
     { label: 'Home', link: '/' },
@@ -35,6 +35,7 @@ const ProjectsPage = () => {
           ))}
         </div>
       </div>
+      <TrustedBy />
     </section>
     </>
   )
