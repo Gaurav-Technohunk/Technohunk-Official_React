@@ -80,18 +80,20 @@ export const projectsTwo = [{
   },
 ];
 
-export const projectSingle = [{
-    id: 1,
-    category: "Connected World",
-    title: "Digital Revolution",
-    image: projectSingleImg1,
-  },
+export const projectSingle = [
   {
-    id: 2,
+    id: 1,
     category: "Global Nexus",
     title: "Innovative Solutions",
     image: projectSingleImg2,
   },
+  {
+    id: 2,
+    category: "Connected World",
+    title: "Digital Revolution",
+    image: projectSingleImg1,
+  },
+  
   {
     id: 3,
     category: "Future Innovators",
