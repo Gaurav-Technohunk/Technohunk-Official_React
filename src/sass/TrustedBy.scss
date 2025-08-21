@@ -1,0 +1,80 @@
+// =============================
+// Configurable Variables
+// =============================
+$card-width: 190px;
+$card-height: 100px;
+$scroll-speed: 25s;
+$fade-width: 60px;
+$fade-bg: #fff; // change to #000 for dark backgrounds
+
+// =============================
+// Trusted By Section
+// =============================
+.trusted-by {
+  .logo-slider {
+    overflow: hidden;
+    position: relative;
+    max-width: calc(#{$card-width} * 6 + 8rem); // show about 5 logos
+    margin: 0 auto;
+
+    // Fade edges
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: $fade-width;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, $fade-bg, transparent);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, $fade-bg, transparent);
+    }
+
+    // Animation track
+    .logo-track {
+      display: inline-flex;
+      animation: scroll-left $scroll-speed linear infinite;
+    }
+
+    &.reverse .logo-track {
+      animation: scroll-right $scroll-speed linear infinite;
+    }
+  }
+
+  // Logo card style
+  .logo-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eaeaea;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    min-width: $card-width;
+    height: $card-height;
+  }
+}
+
+// =============================
+// Animations
+// =============================
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}

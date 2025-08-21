@@ -52,7 +52,7 @@ const Counter = () => {
   }, [isVisible]);
 
   return (
-    <section className="ep-counter-section pt-120" ref={counterRef}>
+    <section className="ep-counter-section pt-120 mb-20" ref={counterRef}>
       <div className="container">
         <div className="row">
           <div className="col-lg-10">
