@@ -1,7 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
 import { Link } from 'react-router-dom';
-import projectBanners from '../assets/images/projects/project-details-banner.png';
+import projectBanners from '../assets/images/projects/control-map-vid.mp4';
 import arrowIcon from '../assets/images/icons/icon-right-arrow.svg';
 import projectInerImg1 from '../assets/images/projects/project-detail-inner-img-1.png';
 import projectInerImg2 from '../assets/images/projects/project-detail-inner-img-2.png';
@@ -20,8 +20,15 @@ const ProjectDetailsPage = () => {
         <div className="container">
           <div className="project-banner-image position-relative">
             <div className="reveal zoom-out overflow-hidden rounded-20">
-              <img loading="lazy" src={projectBanners} alt="project-details-banner"
-                className="img-fluid w-100" />
+              {/* <img loading="lazy" src={projectBanners} alt="project-details-banner"
+                className="img-fluid w-100" /> */}
+                <video src={projectBanners}
+                loop
+                muted
+                playsInline
+                autoPlay
+                className='img-fluid rounded'
+                />
             </div>
             <div className="project-information position-absolute rounded-20">
               <h4 className="title rounded-20 text-center mb-30">Project Information</h4>
@@ -32,7 +39,7 @@ const ProjectDetailsPage = () => {
                 </li>
                 <li className="d-flex align-items-center rounded-20 gap-4 section-bg">
                   <h5 className="flex-shrink-0 label">Customer:</h5>
-                  <p>David Bravis</p>
+                  <p>ControlMap</p>
                 </li>
                 <li className="d-flex align-items-center rounded-20 gap-4 section-bg">
                   <h5 className="flex-shrink-0 label">Start date:</h5>
