@@ -13,6 +13,7 @@ const ContactPage = () => {
     phone: '',
     message: ''
   });
+  const [status, setStatus] = useState('');
   const [validator] = useState(new SimpleReactValidator({
     className: 'errorMessage'
   }));
@@ -26,29 +27,36 @@ const ContactPage = () => {
     }
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     if (validator.allValid()) {
       validator.hideMessages();
-
-      toast.success("Form submitted successfully!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-
-      // Clear form fields after successful submission
-      setForms({
-        name: '',
-        email: '',
-        subject: '',
-        phone: '',
-        message: ''
-      });
+      setStatus('Sending...');
+      try {
+        const res = await fetch('https://technohunk-official-node.onrender.com/api/sendMail', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(forms)
+        });
+        const data = await res.json();
+        if (res.ok) {
+          toast.success("Form submitted successfully!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          setStatus('Message sent successfully!');
+          setForms({ name: '', email: '', subject: '', phone: '', message: '' });
+        } else {
+          setStatus(data.error || 'Failed to send message.');
+        }
+      } catch (err) {
+        setStatus('Error sending message.');
+      }
     } else {
       validator.showMessages();
     }
@@ -180,9 +188,10 @@ const ContactPage = () => {
                       className="form-control form-field shadow-none"
                     >
                       <option value="" disabled>Subject</option>
-                      <option value="Support">Support</option>
-                      <option value="Sales">Sales</option>
+                      <option value="Software_Devlopment">Software Devlopment</option>
+                      <option value="AI-ML">AI-ML</option>
                       <option value="General">General</option>
+                      <option value="Sales">Sales</option>
                     </select>
                     {validator.message('subject', forms.subject, 'required')}
                   </div>
@@ -207,6 +216,11 @@ const ContactPage = () => {
                     </button>
                   </div>
                 </div>
+                {status && (
+                  <div className="col-lg-12">
+                    <div className="alert alert-info mt-3">{status}</div>
+                  </div>
+                )}
               </div>
             </form>
           </div>
