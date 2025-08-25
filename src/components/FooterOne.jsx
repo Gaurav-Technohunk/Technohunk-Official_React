@@ -92,12 +92,12 @@ const FooterOne = () => {
                   <div className="footer-widget footer-links services-widget">
                     <h4 className="footer-title">What We Do</h4>
                     <ul className="list-unstyled">
-                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> Software Development </Link></li>
-                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> AI/ML Implementation </Link></li>
-                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> Business Process Auto.</Link></li>
-                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> Digital Transformation</Link></li>
-                      <li><Link to="/services"><i className="fas fa-chevron-right"></i>Cybersecurity Advisory</Link></li>
-                      <li><Link to="/services"><i className="fas fa-chevron-right"></i> Data Analytics/Insights</Link></li>
+                      <li><Link to="/software-development"><i className="fas fa-chevron-right"></i> Software Development </Link></li>
+                      <li><Link to="/ai-ml-implimentation"><i className="fas fa-chevron-right"></i> AI/ML Implementation </Link></li>
+                      <li><Link to="/business-automation"><i className="fas fa-chevron-right"></i> Business Process Auto.</Link></li>
+                      <li><Link to="/digital-transformation"><i className="fas fa-chevron-right"></i> Digital Transformation</Link></li>
+                      <li><Link to="/cybersecurity-advisory"><i className="fas fa-chevron-right"></i>Cybersecurity Advisory</Link></li>
+                      <li><Link to="/data-analytics"><i className="fas fa-chevron-right"></i> Data Analytics/Insights</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -118,24 +118,24 @@ const FooterOne = () => {
                     <h4 className="footer-title">Recent Post</h4>
                     <ul className="list-unstyled">
                       <li>
-                        <Link to="/blog">
+                        <Link to="/blog/drive-success-with-cutting-edge-technology">
                           <span className="title">
-                            Crafting Tomorrow’s Digital World
+                            Drive success with cutting-edge technology
                           </span>
                           <small>
                             <i className="fas fa-calendar-alt"></i>
-                            Feb 19, 2025
+                            Mar 09, 2025
                           </small>
                         </Link>
                       </li>
                       <li>
-                        <Link to="/blog">
+                        <Link to="blog/empowering-progress-through-technology">
                           <span className="title">
-                            Technology That Powers the Future
+                            Empowering Progress Through Technology
                           </span>
                           <small>
                             <i className="fas fa-calendar-alt"></i>
-                            June 10, 2025
+                            April 23, 2025
                           </small>
                         </Link>
                       </li>

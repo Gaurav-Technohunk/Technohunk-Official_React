@@ -34,7 +34,7 @@ const SoftwareDevelopmentPage = () => {
 
               </div>
               <div className="service-text mt-30">
-                <h2 className="title">Software solutions for a smarter future</h2>
+                <h2 className="title">Software Solutions For a Smarter Future</h2>
                 <p><b>Software solutions focus on building intelligent,scalable, and efficient systems that 
                   simplify daily tasks, enhance decision-making,and drive innovation.</b> By leveraging modern 
                   technologies such as artificial intelligence,cloud computing, and automation, these 
